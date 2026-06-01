@@ -1,0 +1,20 @@
+name: Apple iPadOS
+on: { push: { branches: [main] }, pull_request: {}, workflow_dispatch: {} }
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.repository }}-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  test:
+    uses: ./.github/workflows/_apple-sim-xcodeproj.yml
+    with:
+      workflow-name: "iPadOS"
+      project: "Hebe.xcodeproj"
+      scheme: "HebeApp"
+      action: "build"
+      sim-runtime-prefix: "com.apple.CoreSimulator.SimRuntime.iOS"
+      device-name-regex: "iPad"

@@ -1,0 +1,37 @@
+{
+  "configurations" : [
+    {
+      "id" : "B39A1CAA-B900-410D-B174-618AC9968EE8",
+      "name" : "Configuration 1",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "codeCoverage" : false,
+    "performanceAntipatternCheckerEnabled" : true,
+    "targetForVariableExpansion" : {
+      "containerPath" : "container:Hebe.xcodeproj",
+      "identifier" : "66CD91F7FB2FAA1B548E212A",
+      "name" : "HebeMacOS"
+    }
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:Hebe.xcodeproj",
+        "identifier" : "260B8D465D2B6F62FB79679D",
+        "name" : "HebeTests"
+      }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:Hebe.xcodeproj",
+        "identifier" : "406F55E5AA4FA655E469C220",
+        "name" : "HebeUITests"
+      }
+    }
+  ],
+  "version" : 1
+}

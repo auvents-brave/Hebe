@@ -1,0 +1,5 @@
+.DS_Store
+Package.resolved
+xcode
+xcuserdata/
+*.xcworkspace/

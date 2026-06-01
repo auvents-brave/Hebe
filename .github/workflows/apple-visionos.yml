@@ -1,0 +1,20 @@
+name: Apple visionOS
+on: { push: { branches: [main] }, pull_request: {}, workflow_dispatch: {} }
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.repository }}-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    uses: ./.github/workflows/_apple-sim-xcodeproj.yml
+    with:
+      workflow-name: "visionOS"
+      project: "Hebe.xcodeproj"
+      scheme: "HebeApp"
+      action: "build"
+      sim-runtime-prefix: "com.apple.CoreSimulator.SimRuntime.xrOS"
+      device-name-regex: "Vision|Apple Vision"

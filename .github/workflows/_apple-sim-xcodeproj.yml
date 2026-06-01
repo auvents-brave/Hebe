@@ -1,0 +1,159 @@
+name: _Apple Simulator Xcode Project (Reusable)
+
+on:
+  workflow_call:
+    inputs:
+      workflow-name:
+        required: true
+        type: string
+      project:
+        required: true
+        type: string
+      scheme:
+        required: true
+        type: string
+      action:
+        required: false
+        type: string
+        default: "build"
+      sim-runtime-prefix:
+        required: true
+        type: string
+      device-name-regex:
+        required: false
+        type: string
+        default: ".*"
+
+permissions:
+  contents: read
+
+jobs:
+  run:
+    name: "${{ inputs.workflow-name }}"
+    runs-on: macos-26
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: maxim-lobanov/setup-xcode@v1
+        with:
+          xcode-version: "26.5"
+
+      - name: Resolve simulator destination
+        id: sim
+        shell: bash
+        env:
+          RUNTIME_PREFIX: ${{ inputs.sim-runtime-prefix }}
+          DEVICE_REGEX: ${{ inputs.device-name-regex }}
+        run: |
+          set -euo pipefail
+          python3 <<'PY'
+          import json
+          import os
+          import re
+          import subprocess
+          import sys
+
+          prefix = os.environ["RUNTIME_PREFIX"]
+          pattern = re.compile(os.environ["DEVICE_REGEX"])
+
+          data = json.loads(subprocess.check_output(
+              ["xcrun", "simctl", "list", "devices", "available", "--json"], text=True
+          ))
+
+          def runtime_ver(runtime_key):
+            m = re.search(r'-(\d+)(?:-(\d+))?(?:-(\d+))?$', runtime_key)
+            if not m:
+              return (0, 0, 0)
+            return (int(m.group(1)), int(m.group(2) or 0), int(m.group(3) or 0))
+
+          candidates = []
+          for runtime_key, devices in data.get("devices", {}).items():
+            if not runtime_key.startswith(prefix + "-"):
+              continue
+            rv = runtime_ver(runtime_key)
+            for d in devices:
+              if not d.get("isAvailable", False):
+                continue
+              name = d.get("name", "")
+              if not pattern.search(name):
+                continue
+              candidates.append((rv, runtime_key, d["udid"], name))
+
+          if not candidates:
+            print("No simulator candidates found.", file=sys.stderr)
+            sys.exit(1)
+
+          candidates.sort(key=lambda x: x[0])
+          rv, runtime_key, udid, name = candidates[-1]
+          print(f"Using simulator: {name} | runtime={runtime_key} | udid={udid} | reason=latest-available")
+
+          with open(os.environ["GITHUB_OUTPUT"], "a", encoding="utf-8") as out:
+            out.write(f"destination=id={udid}\n")
+            out.write(f"runtime_key={runtime_key}\n")
+          PY
+
+      - name: Run xcodebuild
+        shell: bash
+        env:
+          PROJECT: ${{ inputs.project }}
+          SCHEME: ${{ inputs.scheme }}
+          ACTION: ${{ inputs.action }}
+          DESTINATION: ${{ steps.sim.outputs.destination }}
+          RUNTIME_KEY: ${{ steps.sim.outputs.runtime_key }}
+        run: |
+          set -euo pipefail
+          python3 <<'PY'
+          import os
+          import re
+          import subprocess
+          import sys
+
+          project = os.environ["PROJECT"]
+          scheme = os.environ["SCHEME"]
+          action = os.environ["ACTION"]
+          destination = os.environ["DESTINATION"]
+          runtime_key = os.environ["RUNTIME_KEY"]
+
+          if action not in {"build", "test"}:
+              print(f"Invalid action: {action}", file=sys.stderr)
+              sys.exit(1)
+
+          if not re.fullmatch(r"[A-Za-z0-9._ /-]+", project):
+              print(f"Invalid project: {project}", file=sys.stderr)
+              sys.exit(1)
+
+          if not re.fullmatch(r"[A-Za-z0-9._ -]+", scheme):
+              print(f"Invalid scheme: {scheme}", file=sys.stderr)
+              sys.exit(1)
+
+          if not re.fullmatch(r"id=[A-Fa-f0-9-]+", destination):
+              print(f"Invalid destination: {destination}", file=sys.stderr)
+              sys.exit(1)
+
+          print(f"Running action={action} project={project} scheme={scheme} destination={destination} runtime={runtime_key}")
+
+          subprocess.run([
+              "xcodebuild",
+              "-resolvePackageDependencies",
+              "-project", project,
+              "-scheme", scheme,
+          ], check=True)
+
+          cmd = [
+              "xcodebuild",
+              action,
+              "-project", project,
+              "-scheme", scheme,
+              "-destination", destination,
+              "-derivedDataPath", "./.derivedData",
+              "-skipPackagePluginValidation",
+              "-skipMacroValidation",
+              "CODE_SIGNING_ALLOWED=NO",
+          ]
+
+          if action == "test":
+              cmd.extend(["-enableCodeCoverage", "YES"])
+
+          subprocess.run(cmd, check=True)
+          PY

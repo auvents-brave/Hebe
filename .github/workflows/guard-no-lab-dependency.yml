@@ -1,0 +1,38 @@
+name: Dependency guard
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.repository }}-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  no-lab-dependency:
+    name: No 'lab' branch dependency on main
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Reject dependencies pinned to the 'lab' branch
+        shell: bash
+        run: |
+          set -uo pipefail
+          # A released `main` must not depend on the volatile `lab` branch —
+          # neither a Package.swift remote (`branch: "lab"`) nor an Xcode project
+          # package reference (`branch = lab;`). Pin a version tag or `main`.
+          matches="$(grep -rnE 'branch:[[:space:]]*"lab"|branch[[:space:]]*=[[:space:]]*"?lab"?' \
+            --include='Package.swift' --include='*.pbxproj' . || true)"
+          if [ -n "$matches" ]; then
+            echo "::error::main must not depend on the 'lab' branch — pin a version tag or 'main' instead."
+            echo "Offending references:"
+            echo "$matches"
+            exit 1
+          fi
+          echo "OK — no 'lab' branch dependencies found."

@@ -1,0 +1,1805 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		C5C5D8588ED0EDFDB6A97740 /* Aggregate */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = EFDE50BFA0490A019452D7AA /* Build configuration list for PBXAggregateTarget "Aggregate" */;
+			buildPhases = (
+			);
+			dependencies = (
+			);
+			name = Aggregate;
+			productName = Aggregate;
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		0007AD2F0133DDDBA0218001 /* SharedConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED5970F58422867C0D24A0E /* SharedConstants.swift */; };
+		08CB65D223DBD410DDE63099 /* PersistenceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5FBF6343E4C00B28B119C3 /* PersistenceController.swift */; };
+		091ADEE04FF1DEB655207074 /* InventorySnapshotRepublisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45FA907421DAB90A48FB88D4 /* InventorySnapshotRepublisher.swift */; };
+		0E6F0A071FD38E8D2A7F1A89 /* HebeInventoryWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = D04C8D6A01568B513A92F71A /* HebeInventoryWidget.swift */; };
+		0E7EF34C5D696262D29ACFDE /* TVApplicationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF11A14E77511CDAE4EFDD7 /* TVApplicationDelegate.swift */; platformFilters = (tvos, ); };
+		12856A4F2F0FC788BF5D2DEA /* HebeControlIntents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FA47BDDA3998E7CA6B14704 /* HebeControlIntents.swift */; };
+		158A43882B6B36154A0E24BD /* PersistenceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5FBF6343E4C00B28B119C3 /* PersistenceController.swift */; };
+		17CD7AB764C040C56137ED8B /* SettingsStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6037B6A8694FC403C78CBF6D /* SettingsStore.swift */; };
+		196397BDCD1651D1B4C60D56 /* SharedConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED5970F58422867C0D24A0E /* SharedConstants.swift */; };
+		1B494DE486ABFBAEC213D3B9 /* Thing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91785C39EBAA0F60DF71521B /* Thing.swift */; };
+		1C20AEE816967B4B81E6E109 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = C32037DC0DC2636807855C29 /* Localizable.xcstrings */; };
+		1C2C0B244107D23FF9FC6828 /* HebeRootContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6002B66F2A76B949137FC76D /* HebeRootContainerView.swift */; };
+		1C467A039D4C4D9A718D4958 /* VisionOSAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E1C08DF186A36EDED86E93E1 /* VisionOSAssets.xcassets */; platformFilters = (xros, ); };
+		1C72DE775F9FA3F59597C067 /* InventorySnapshotPublisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F07B27B5ADD4497E18C6A4 /* InventorySnapshotPublisher.swift */; };
+		1F533A4DE4A9818874ADC3F5 /* InventorySnapshotReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7DCCE14B09ABBE6CB5ABDA8 /* InventorySnapshotReader.swift */; };
+		214BAD686D73DF3D0AF78C85 /* ZIPFoundation in Frameworks */ = {isa = PBXBuildFile; productRef = EEB861C8C2A46DE21B335A67 /* ZIPFoundation */; };
+		22F5E0FE405CA9CD535E5253 /* SplashScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EAF23088E721721109579FA /* SplashScreenView.swift */; };
+		24AAD349A43581DF4A95541A /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 331857CE4ED2C87F12441B7B /* Settings.bundle */; platformFilters = (ios, tvos, ); };
+		28C1BE1CD7CE3F1F2F45BE42 /* BootstrapController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B26B41E9BB8D3BA733BF833 /* BootstrapController.swift */; };
+		2A4EF2EEF78A033004532D54 /* InventorySnapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 371712F7B49B4A10A007F55B /* InventorySnapshot.swift */; };
+		2B58428E8C240C5B81007C22 /* InventoryHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CFB4AC81B6B99143AD91D90 /* InventoryHomeView.swift */; };
+		2C3062C037E2D638AB343377 /* HebeWidgetsBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10602D99A833F6C2CC23AB18 /* HebeWidgetsBundle.swift */; };
+		2D94946F93AFE024A9A20D62 /* HebeAppShortcuts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B793BE838C440913DC6E00B /* HebeAppShortcuts.swift */; };
+		2F1515A084A88C0B9EEA0917 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = C32037DC0DC2636807855C29 /* Localizable.xcstrings */; };
+		2F37E72C56B8DB8A0029E6BF /* ShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1860748C31A63C7819662719 /* ShareViewController.swift */; };
+		2F6C9F533B01AD74533B6D64 /* InventoryRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE9424B6E5BF36CF31C0663 /* InventoryRepository.swift */; };
+		3A6E4107B06A9EF438A541C9 /* HebeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D75618E1E547DABBD085A14 /* HebeApp.swift */; };
+		3F705817373E3F37758A64B0 /* FurnitureTreeListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D6D0D64A9E588D55C289E9 /* FurnitureTreeListView.swift */; };
+		46CD55DBE723515EE07136DB /* FurnitureTreeListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D6D0D64A9E588D55C289E9 /* FurnitureTreeListView.swift */; };
+		48C2E55376B427C3683353FA /* SharedConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED5970F58422867C0D24A0E /* SharedConstants.swift */; };
+		4D7F092B122D7201BD574EA8 /* InventorySnapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 371712F7B49B4A10A007F55B /* InventorySnapshot.swift */; };
+		4E31966858CD3A2812AC80BD /* HebeWidgets.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = DF0019E0F40F9AA0ACF9D176 /* HebeWidgets.appex */; platformFilters = (watchos, ); settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		4E6F14D9E7545F79144CD22A /* CloudBootstrapService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5EAF7E7DBC0FB5D401C3DA1 /* CloudBootstrapService.swift */; };
+		53C5E7B7560A8F712C3C41DF /* Thing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91785C39EBAA0F60DF71521B /* Thing.swift */; };
+		573428733E4A4043314E62C5 /* Furniture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29B5737EE2FA3B1D005AD0A1 /* Furniture.swift */; };
+		5756634BE1043CB2B4ED878D /* SharedConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED5970F58422867C0D24A0E /* SharedConstants.swift */; };
+		57B0A8EF7F4778A717BBB22C /* ThingListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C394DA9EA68D946B91ED04F2 /* ThingListView.swift */; };
+		59D32254A4C9605F6CED174A /* StatsStatusItemController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 551925C1128C84B8D043F249 /* StatsStatusItemController.swift */; platformFilters = (macos, ); };
+		5E5446CC9E1AD054958B1DEF /* HebeLiveBubble.swift in Sources */ = {isa = PBXBuildFile; fileRef = 358066C7DD4A739964AAFC67 /* HebeLiveBubble.swift */; };
+		624AF6581AEFDBCD96560A91 /* InventoryHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CFB4AC81B6B99143AD91D90 /* InventoryHomeView.swift */; };
+		64F28FB888FE86C86E388357 /* PersistenceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5FBF6343E4C00B28B119C3 /* PersistenceController.swift */; };
+		699CA61E329FFA07234C2823 /* ShareImportViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C713D855670952882C7B0F /* ShareImportViewModel.swift */; };
+		717F13762A75A49D0E3707E4 /* L10n.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5595608271AEB17F94B74C6E /* L10n.swift */; };
+		75CC1F849AA8E28E04BFC7E6 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = C32037DC0DC2636807855C29 /* Localizable.xcstrings */; };
+		77D052AB45740F0F9025779A /* ShareImportPreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB153BA0EB06D177649DE8FB /* ShareImportPreviewView.swift */; };
+		7C5023D2D1C2E5531FDAE315 /* shelf.png in Resources */ = {isa = PBXBuildFile; fileRef = D771BCEF0E67AD7C1D28B372 /* shelf.png */; };
+		7DDA53CAEA73109EB46D5FDF /* FurnitureThing.swift in Sources */ = {isa = PBXBuildFile; fileRef = D25D2E432B51BD3AA5DE29DA /* FurnitureThing.swift */; };
+		7DEC3D7C4CAC0EBE3DB16B82 /* L10n.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5595608271AEB17F94B74C6E /* L10n.swift */; };
+		7E43C6E89AC3B14B49C20AE0 /* Furniture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29B5737EE2FA3B1D005AD0A1 /* Furniture.swift */; };
+		8038C4DD910C4A387AF86413 /* HebeWidgets.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = DF0019E0F40F9AA0ACF9D176 /* HebeWidgets.appex */; platformFilters = (ios, maccatalyst, macos, xros, ); settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		84E2073A4E45ABE71B9AAFB0 /* Euryale in Frameworks */ = {isa = PBXBuildFile; productRef = BC732A71926757CD32C45974 /* Euryale */; };
+		8A1BC63D5FCE54AF382853B8 /* SharedConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED5970F58422867C0D24A0E /* SharedConstants.swift */; };
+		8AAC4D5ABB59E88A75D1F0E8 /* BootstrapController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B26B41E9BB8D3BA733BF833 /* BootstrapController.swift */; };
+		8CAE16F12FCB357E00BD750D /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 8CAE16F02FCB357500BD750D /* Credits.rtf */; platformFilters = (macos, ); };
+		8E5B79C0584F0004E9D739C6 /* HebeShareIOS.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = A4FEF598FE99E8729FA20D29 /* HebeShareIOS.appex */; platformFilters = (ios, maccatalyst, macos, xros, ); settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		90F1E5B95D81395738E64887 /* TVOSAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 330C888B6D9757BC65844367 /* TVOSAssets.xcassets */; platformFilters = (tvos, ); };
+		922B92512E84592398FF4FCA /* FurnitureThing.swift in Sources */ = {isa = PBXBuildFile; fileRef = D25D2E432B51BD3AA5DE29DA /* FurnitureThing.swift */; };
+		9245A3506BC2D2F04D0E8D10 /* SplashScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EAF23088E721721109579FA /* SplashScreenView.swift */; };
+		92473BD0F75BBE6E2C46AE5B /* SharedImportSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2333F0DCD0A5CFF048E1C444 /* SharedImportSupport.swift */; };
+		9707E34400AFF6650357D6D5 /* PreviewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E1E1D53F33B628DED305F19 /* PreviewData.swift */; };
+		98AE493B16463E2C725EC649 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F7069A2EBFDBACCF37D7611 /* LaunchScreen.storyboard */; platformFilter = ios; };
+		9BFC2A43B5E399BDD44B35DD /* FurnitureThing.swift in Sources */ = {isa = PBXBuildFile; fileRef = D25D2E432B51BD3AA5DE29DA /* FurnitureThing.swift */; };
+		A11CE5141705A1A700000002 /* SiriIntentTip.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11CE5141705A1A700000001 /* SiriIntentTip.swift */; };
+		A11CE5141705A1A700000003 /* SiriIntentTip.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11CE5141705A1A700000001 /* SiriIntentTip.swift */; };
+		A1920E95C4E9550EB230B3CB /* InventorySnapshotRepublisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45FA907421DAB90A48FB88D4 /* InventorySnapshotRepublisher.swift */; };
+		A290ACACFE9E9F39E1275444 /* InventorySnapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 371712F7B49B4A10A007F55B /* InventorySnapshot.swift */; };
+		A45066E4C68E0A8A9491AE70 /* TopShelfProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 213019A7121FD6DAE90361AF /* TopShelfProvider.swift */; };
+		A487A3165ECB5EA9D8FE8483 /* HebeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D75618E1E547DABBD085A14 /* HebeApp.swift */; };
+		A636F8941F785D07CE54700A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 66D6A605F8CF0B22C4361CCB /* Assets.xcassets */; };
+		A9E3D1A4CC5D6E23816ED2CA /* FurnitureThing.swift in Sources */ = {isa = PBXBuildFile; fileRef = D25D2E432B51BD3AA5DE29DA /* FurnitureThing.swift */; };
+		AAF060D58A3BF66B6E620652 /* ZIPFoundation in Frameworks */ = {isa = PBXBuildFile; productRef = 03A5953E72B4E63B6788CD3B /* ZIPFoundation */; };
+		AB80BBA794BF5485D0F14378 /* ThingListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C394DA9EA68D946B91ED04F2 /* ThingListView.swift */; };
+		ADF1BF7CDF3B2D51ED3383F8 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 139C2DF397EB04AA3CC03A52 /* SettingsView.swift */; };
+		AE23440118B50E78E5FE3180 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 66D6A605F8CF0B22C4361CCB /* Assets.xcassets */; };
+		AFBFF5CE82AE9598E57A3483 /* InventorySnapshotPublisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F07B27B5ADD4497E18C6A4 /* InventorySnapshotPublisher.swift */; };
+		B0BB1E0000000000000000F2 /* HebeLiveBubbleLiveActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BB1E0000000000000000F1 /* HebeLiveBubbleLiveActivity.swift */; };
+		B0BB1E0000000000000000F3 /* HebeLiveBubbleLiveActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BB1E0000000000000000F1 /* HebeLiveBubbleLiveActivity.swift */; };
+		B0E64D11D5CE9A8D0C54CD20 /* InventorySnapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 371712F7B49B4A10A007F55B /* InventorySnapshot.swift */; };
+		B37337F71123694C8B53DC91 /* AppIcon.icon in Resources */ = {isa = PBXBuildFile; fileRef = 4AEED7470106E0D677D4A21C /* AppIcon.icon */; };
+		B3C8D0406E19D7E7D77C407A /* InventoryRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE9424B6E5BF36CF31C0663 /* InventoryRepository.swift */; };
+		B7637C8B3167F41C773ADA8A /* HebeLiveBubble.swift in Sources */ = {isa = PBXBuildFile; fileRef = 358066C7DD4A739964AAFC67 /* HebeLiveBubble.swift */; };
+		B8912DE25746738C3EDFDA2D /* CloudBootstrapService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5EAF7E7DBC0FB5D401C3DA1 /* CloudBootstrapService.swift */; };
+		B8BA0DA8A05E80BB0E05BCD3 /* PersistenceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5FBF6343E4C00B28B119C3 /* PersistenceController.swift */; };
+		BBBE322FF0D59B308D7C50E6 /* InventoryTransfer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B90E02B87818C211674D7E1 /* InventoryTransfer.swift */; };
+		BD08065CE27AE25A574AF82E /* HebeRootContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6002B66F2A76B949137FC76D /* HebeRootContainerView.swift */; };
+		C15959D08B223E3619249CCC /* InventoryTransfer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B90E02B87818C211674D7E1 /* InventoryTransfer.swift */; };
+		C75A91C5442AFEB7A4D49EDF /* AppIcon.icon in Resources */ = {isa = PBXBuildFile; fileRef = 4AEED7470106E0D677D4A21C /* AppIcon.icon */; platformFilters = (ios, macos, ); };
+		C89846F583D2BCEE05828D76 /* FocusHighlightRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E029B6A2403DFD7FD9884D5 /* FocusHighlightRow.swift */; };
+		C90A6C82F503ECCE95D3F902 /* HebeInventoryMathTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD31B7550FCCB471154B23B /* HebeInventoryMathTests.swift */; };
+		C9855CAC9563A53EE2450073 /* TVUserSessionMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 002BFDF73BDB969F1DB8A690 /* TVUserSessionMonitor.swift */; platformFilters = (tvos, ); };
+		CBF85E22FBECF160A1ABA396 /* L10n.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5595608271AEB17F94B74C6E /* L10n.swift */; };
+		CD471A9C0A5E2EA5F25D4809 /* L10n.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5595608271AEB17F94B74C6E /* L10n.swift */; };
+		D04AAFFFBF81CC9DE7301BE3 /* HebeTopShelf.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 0452D8012AC78192C812C6AE /* HebeTopShelf.appex */; platformFilters = (tvos, ); settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		D0905AE2D0C82CC605997943 /* InventoryTreeNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9306374941FF00BB818A05A7 /* InventoryTreeNode.swift */; };
+		D0E3E3A113D325AB843F6483 /* PreviewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E1E1D53F33B628DED305F19 /* PreviewData.swift */; };
+		D1211DB3E7119D3521BCEC66 /* Euryale in Frameworks */ = {isa = PBXBuildFile; productRef = 0D6CA3C9731D74ACDFB5653B /* Euryale */; };
+		D6285CAB0DED1C96141D6A55 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 139C2DF397EB04AA3CC03A52 /* SettingsView.swift */; };
+		D7062E04DA3508BF5AE15BF2 /* SpotlightIndexer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D99CB99D5F2FCC4BBC2EAB /* SpotlightIndexer.swift */; platformFilters = (ios, macos, xros, ); };
+		DB3BA98DFAD890BA5FFB2C38 /* Thing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91785C39EBAA0F60DF71521B /* Thing.swift */; };
+		DCA1C10C095DD7076B06582D /* InventorySnapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 371712F7B49B4A10A007F55B /* InventorySnapshot.swift */; };
+		DD0D5BA4FC5574F4A32938FA /* InventorySnapshotReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7DCCE14B09ABBE6CB5ABDA8 /* InventorySnapshotReader.swift */; };
+		E130AF9DBC2B6F1B9EC1E6BD /* HebeIntents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B1D6AC59140F048E40F31D3 /* HebeIntents.swift */; };
+		E2435CD2EC56E491FC840634 /* SettingsStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6037B6A8694FC403C78CBF6D /* SettingsStore.swift */; };
+		E53BE5AEA71B1EFC5F9F982D /* InventoryTreeNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9306374941FF00BB818A05A7 /* InventoryTreeNode.swift */; };
+		E547112718AF2502737E4DD0 /* CloudBootstrapService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5EAF7E7DBC0FB5D401C3DA1 /* CloudBootstrapService.swift */; };
+		E6300C3B634361C456C596B9 /* SettingsStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6037B6A8694FC403C78CBF6D /* SettingsStore.swift */; };
+		E7B12B65A44D90C79A772D8C /* L10n.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5595608271AEB17F94B74C6E /* L10n.swift */; };
+		E88179347CF784C31756FF02 /* Furniture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29B5737EE2FA3B1D005AD0A1 /* Furniture.swift */; };
+		EACFE7B4EF85C7607A8124A4 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = C32037DC0DC2636807855C29 /* Localizable.xcstrings */; };
+		ECB83FCD55242D65352D6B5D /* HebeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0C22CB2F4CA0C1B0D17776E /* HebeUITestsLaunchTests.swift */; };
+		EE6957D328E7960A7DB7E2B8 /* InventorySnapshotReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7DCCE14B09ABBE6CB5ABDA8 /* InventorySnapshotReader.swift */; };
+		EE7D79D1AB407FB7EDD98848 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 66D6A605F8CF0B22C4361CCB /* Assets.xcassets */; };
+		F017972C10F66B45CD729D12 /* TopShelfDiagnostics.swift in Sources */ = {isa = PBXBuildFile; fileRef = D131CED905DB7B2606516AE0 /* TopShelfDiagnostics.swift */; platformFilters = (tvos, ); };
+		F018AC3D25F6936377C3A174 /* InventoryRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE9424B6E5BF36CF31C0663 /* InventoryRepository.swift */; };
+		F2D058090FE4D789E37907DE /* HebeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0412DB0BA63489C89459FD30 /* HebeUITests.swift */; };
+		F4F58A66AFB94C84AC874566 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = C32037DC0DC2636807855C29 /* Localizable.xcstrings */; };
+		F5EC710000000000000002 /* InventorySection.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5EC710000000000000001 /* InventorySection.swift */; };
+		F5EC710000000000000003 /* InventorySection.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5EC710000000000000001 /* InventorySection.swift */; };
+		F5EC710000000000000004 /* InventorySection.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5EC710000000000000001 /* InventorySection.swift */; };
+		F5EC710000000000000005 /* InventorySection.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5EC710000000000000001 /* InventorySection.swift */; };
+		F5EC710000000000000006 /* InventorySection.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5EC710000000000000001 /* InventorySection.swift */; };
+		F629055DE5216599B4B2419E /* HebeControls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AE570F789AB475EF0315F2C /* HebeControls.swift */; };
+		F64C15506CC5E42F151623EA /* InventoryTreeNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9306374941FF00BB818A05A7 /* InventoryTreeNode.swift */; };
+		F7662592614F14BFB03B87EF /* InventorySnapshotRepublisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45FA907421DAB90A48FB88D4 /* InventorySnapshotRepublisher.swift */; };
+		F7D208B43A2391C1CAA84BE4 /* SettingsStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6037B6A8694FC403C78CBF6D /* SettingsStore.swift */; };
+		F99AE69F099D31E9680E416D /* Furniture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29B5737EE2FA3B1D005AD0A1 /* Furniture.swift */; };
+		F99EDFC45D724A524AC516DD /* Thing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91785C39EBAA0F60DF71521B /* Thing.swift */; };
+		FA06CAA7B0701E959E75CDC0 /* InventoryRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE9424B6E5BF36CF31C0663 /* InventoryRepository.swift */; };
+		FB11313691FD2DFE07EE9BE2 /* TopShelfDiagnostics.swift in Sources */ = {isa = PBXBuildFile; fileRef = D131CED905DB7B2606516AE0 /* TopShelfDiagnostics.swift */; };
+		FDA817AD6F4A1DDEA9D57B72 /* FurnitureTreeListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D6D0D64A9E588D55C289E9 /* FurnitureTreeListView.swift */; };
+		FE13E9290F02FB6D6D18FE8B /* HebeControlIntents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FA47BDDA3998E7CA6B14704 /* HebeControlIntents.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0471F26F3C85A89181C8A590 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0E24BB373FAEA7D50A27C05E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C5C5D8588ED0EDFDB6A97740;
+			remoteInfo = Aggregate;
+		};
+		75B4788EE1D27979E3902B8B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0E24BB373FAEA7D50A27C05E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C5C5D8588ED0EDFDB6A97740;
+			remoteInfo = Aggregate;
+		};
+		8F35D32863CF6B592CAFC407 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0E24BB373FAEA7D50A27C05E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2EEC77D8B0203E8E4DB2791F;
+			remoteInfo = HebeTopShelf;
+		};
+		95F141A49EB84159E5C8A388 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0E24BB373FAEA7D50A27C05E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 32F35CD654F366D95FD00926;
+			remoteInfo = HebeShare;
+		};
+		A839AEE907A2664BD3991BDF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0E24BB373FAEA7D50A27C05E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C5C5D8588ED0EDFDB6A97740;
+			remoteInfo = Aggregate;
+		};
+		A9191A85E8F3244D3FD35F9F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0E24BB373FAEA7D50A27C05E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C5C5D8588ED0EDFDB6A97740;
+			remoteInfo = Aggregate;
+		};
+		AAD008678E59BF126A32740D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0E24BB373FAEA7D50A27C05E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7AFEE9EA9ACF1F42572F025E;
+			remoteInfo = HebeWidgets;
+		};
+		B3DD6808F3DA870C1B7BF991 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0E24BB373FAEA7D50A27C05E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7AFEE9EA9ACF1F42572F025E;
+			remoteInfo = HebeWidgets;
+		};
+		CBF05D166DDEC8B4C5D7BCC4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0E24BB373FAEA7D50A27C05E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C5C5D8588ED0EDFDB6A97740;
+			remoteInfo = Aggregate;
+		};
+		E1DF6E5CFF0A707D9351C729 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0E24BB373FAEA7D50A27C05E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C5C5D8588ED0EDFDB6A97740;
+			remoteInfo = Aggregate;
+		};
+		E43BC4984B7BE76B75D1E9F4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0E24BB373FAEA7D50A27C05E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C5C5D8588ED0EDFDB6A97740;
+			remoteInfo = Aggregate;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		07F3B51B750FB9288DF6D498 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				8E5B79C0584F0004E9D739C6 /* HebeShareIOS.appex in Embed Foundation Extensions */,
+				8038C4DD910C4A387AF86413 /* HebeWidgets.appex in Embed Foundation Extensions */,
+				D04AAFFFBF81CC9DE7301BE3 /* HebeTopShelf.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		14F47292F343710404F2E251 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				4E31966858CD3A2812AC80BD /* HebeWidgets.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		002BFDF73BDB969F1DB8A690 /* TVUserSessionMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVUserSessionMonitor.swift; sourceTree = "<group>"; };
+		00C64478A35E9BC2E1E8E17B /* Hebe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hebe.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0412DB0BA63489C89459FD30 /* HebeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HebeUITests.swift; sourceTree = "<group>"; };
+		0452D8012AC78192C812C6AE /* HebeTopShelf.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = HebeTopShelf.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		0F7069A2EBFDBACCF37D7611 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		10602D99A833F6C2CC23AB18 /* HebeWidgetsBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HebeWidgetsBundle.swift; sourceTree = "<group>"; };
+		139C2DF397EB04AA3CC03A52 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		1860748C31A63C7819662719 /* ShareViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareViewController.swift; sourceTree = "<group>"; };
+		1B90E02B87818C211674D7E1 /* InventoryTransfer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = InventoryTransfer.swift; sourceTree = "<group>"; };
+		213019A7121FD6DAE90361AF /* TopShelfProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopShelfProvider.swift; sourceTree = "<group>"; };
+		22F07B27B5ADD4497E18C6A4 /* InventorySnapshotPublisher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InventorySnapshotPublisher.swift; sourceTree = "<group>"; };
+		2333F0DCD0A5CFF048E1C444 /* SharedImportSupport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedImportSupport.swift; sourceTree = "<group>"; };
+		24C713D855670952882C7B0F /* ShareImportViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareImportViewModel.swift; sourceTree = "<group>"; };
+		29B5737EE2FA3B1D005AD0A1 /* Furniture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Furniture.swift; sourceTree = "<group>"; };
+		2EAF23088E721721109579FA /* SplashScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenView.swift; sourceTree = "<group>"; };
+		330C888B6D9757BC65844367 /* TVOSAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = TVOSAssets.xcassets; sourceTree = "<group>"; };
+		331857CE4ED2C87F12441B7B /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = wrapper.cfbundle; path = Settings.bundle; sourceTree = "<group>"; };
+		358066C7DD4A739964AAFC67 /* HebeLiveBubble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HebeLiveBubble.swift; sourceTree = "<group>"; };
+		371712F7B49B4A10A007F55B /* InventorySnapshot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InventorySnapshot.swift; sourceTree = "<group>"; };
+		45FA907421DAB90A48FB88D4 /* InventorySnapshotRepublisher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InventorySnapshotRepublisher.swift; sourceTree = "<group>"; };
+		4AEED7470106E0D677D4A21C /* AppIcon.icon */ = {isa = PBXFileReference; lastKnownFileType = wrapper.icon; path = AppIcon.icon; sourceTree = "<group>"; };
+		4D3CE0572B31CC6644F72714 /* HebeWidgets.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = HebeWidgets.entitlements; sourceTree = "<group>"; };
+		4EA2E44545240BC6B2F26940 /* register_debug_widget.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = register_debug_widget.sh; sourceTree = "<group>"; };
+		551925C1128C84B8D043F249 /* StatsStatusItemController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsStatusItemController.swift; sourceTree = "<group>"; };
+		5595608271AEB17F94B74C6E /* L10n.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = L10n.swift; sourceTree = "<group>"; };
+		5BF1E9AFB4ECDBA9E0AEA96A /* Version.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Version.xcconfig; sourceTree = "<group>"; };
+		5D75618E1E547DABBD085A14 /* HebeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HebeApp.swift; sourceTree = "<group>"; };
+		5E029B6A2403DFD7FD9884D5 /* FocusHighlightRow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = FocusHighlightRow.swift; sourceTree = "<group>"; };
+		6002B66F2A76B949137FC76D /* HebeRootContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HebeRootContainerView.swift; sourceTree = "<group>"; };
+		6037B6A8694FC403C78CBF6D /* SettingsStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsStore.swift; sourceTree = "<group>"; };
+		6571295F898E5F7AFD17690F /* HebeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HebeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		66D6A605F8CF0B22C4361CCB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		6FA47BDDA3998E7CA6B14704 /* HebeControlIntents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HebeControlIntents.swift; sourceTree = "<group>"; };
+		73904DB053E07727B6FF12C1 /* Hebe Watch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Hebe Watch.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7AE570F789AB475EF0315F2C /* HebeControls.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HebeControls.swift; sourceTree = "<group>"; };
+		7F2D6157EF91085D6BBC2571 /* bump_build_number.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = bump_build_number.sh; sourceTree = "<group>"; };
+		8C3FF8B02FCB0172001D0B0E /* HebeApp-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "HebeApp-Info.plist"; sourceTree = "<group>"; };
+		8C3FF8B12FCB0359001D0B0E /* HebeShare-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "HebeShare-Info.plist"; sourceTree = "<group>"; };
+		8CAE16E92FCB077300BD750D /* HebeTopShelf-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "HebeTopShelf-Info.plist"; sourceTree = "<group>"; };
+		8CAE16EA2FCB079500BD750D /* HebeWatch-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "HebeWatch-Info.plist"; sourceTree = "<group>"; };
+		8CAE16EB2FCB07F300BD750D /* HebeWidget-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "HebeWidget-Info.plist"; sourceTree = "<group>"; };
+		8CAE16F02FCB357500BD750D /* Credits.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = Credits.rtf; sourceTree = "<group>"; };
+		91785C39EBAA0F60DF71521B /* Thing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Thing.swift; sourceTree = "<group>"; };
+		9306374941FF00BB818A05A7 /* InventoryTreeNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InventoryTreeNode.swift; sourceTree = "<group>"; };
+		967978BF34F4C6B6703FA8CF /* HebeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HebeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9B1D6AC59140F048E40F31D3 /* HebeIntents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HebeIntents.swift; sourceTree = "<group>"; };
+		9B26B41E9BB8D3BA733BF833 /* BootstrapController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BootstrapController.swift; sourceTree = "<group>"; };
+		9B793BE838C440913DC6E00B /* HebeAppShortcuts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HebeAppShortcuts.swift; sourceTree = "<group>"; };
+		9CFB4AC81B6B99143AD91D90 /* InventoryHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InventoryHomeView.swift; sourceTree = "<group>"; };
+		9E1E1D53F33B628DED305F19 /* PreviewData.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PreviewData.swift; sourceTree = "<group>"; };
+		A11CE5141705A1A700000001 /* SiriIntentTip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiriIntentTip.swift; sourceTree = "<group>"; };
+		A2D99CB99D5F2FCC4BBC2EAB /* SpotlightIndexer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotlightIndexer.swift; sourceTree = "<group>"; };
+		A4FEF598FE99E8729FA20D29 /* HebeShareIOS.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = HebeShareIOS.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		AB153BA0EB06D177649DE8FB /* ShareImportPreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareImportPreviewView.swift; sourceTree = "<group>"; };
+		B0BB1E0000000000000000F1 /* HebeLiveBubbleLiveActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HebeLiveBubbleLiveActivity.swift; sourceTree = "<group>"; };
+		B2D6D0D64A9E588D55C289E9 /* FurnitureTreeListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FurnitureTreeListView.swift; sourceTree = "<group>"; };
+		BAE9424B6E5BF36CF31C0663 /* InventoryRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InventoryRepository.swift; sourceTree = "<group>"; };
+		C0C22CB2F4CA0C1B0D17776E /* HebeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HebeUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		C32037DC0DC2636807855C29 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
+		C394DA9EA68D946B91ED04F2 /* ThingListView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ThingListView.swift; sourceTree = "<group>"; };
+		CEA19B1A35F2737EC3A080AF /* HebeApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = HebeApp.entitlements; sourceTree = "<group>"; };
+		D04C8D6A01568B513A92F71A /* HebeInventoryWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HebeInventoryWidget.swift; sourceTree = "<group>"; };
+		D131CED905DB7B2606516AE0 /* TopShelfDiagnostics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopShelfDiagnostics.swift; sourceTree = "<group>"; };
+		D25D2E432B51BD3AA5DE29DA /* FurnitureThing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FurnitureThing.swift; sourceTree = "<group>"; };
+		D5EAF7E7DBC0FB5D401C3DA1 /* CloudBootstrapService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudBootstrapService.swift; sourceTree = "<group>"; };
+		D771BCEF0E67AD7C1D28B372 /* shelf.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shelf.png; sourceTree = "<group>"; };
+		D7DCCE14B09ABBE6CB5ABDA8 /* InventorySnapshotReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InventorySnapshotReader.swift; sourceTree = "<group>"; };
+		DA5FBF6343E4C00B28B119C3 /* PersistenceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceController.swift; sourceTree = "<group>"; };
+		DF0019E0F40F9AA0ACF9D176 /* HebeWidgets.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = HebeWidgets.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		DFD31B7550FCCB471154B23B /* HebeInventoryMathTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HebeInventoryMathTests.swift; sourceTree = "<group>"; };
+		E1C08DF186A36EDED86E93E1 /* VisionOSAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = VisionOSAssets.xcassets; sourceTree = "<group>"; };
+		E4D001AB68422FE3FF5BCDA3 /* HebeShare.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = HebeShare.entitlements; sourceTree = "<group>"; };
+		EDF11A14E77511CDAE4EFDD7 /* TVApplicationDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVApplicationDelegate.swift; sourceTree = "<group>"; };
+		EED5970F58422867C0D24A0E /* SharedConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedConstants.swift; sourceTree = "<group>"; };
+		F5EC710000000000000001 /* InventorySection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InventorySection.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0D7784A46FBC28B171164144 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84E2073A4E45ABE71B9AAFB0 /* Euryale in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2B411E94FCE806A9F08E81FB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D1211DB3E7119D3521BCEC66 /* Euryale in Frameworks */,
+				214BAD686D73DF3D0AF78C85 /* ZIPFoundation in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		798566CC398843BA378515B7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AAF060D58A3BF66B6E620652 /* ZIPFoundation in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		03CF0D6E5F97BC61611B8AA8 /* Widget */ = {
+			isa = PBXGroup;
+			children = (
+				7AE570F789AB475EF0315F2C /* HebeControls.swift */,
+				D04C8D6A01568B513A92F71A /* HebeInventoryWidget.swift */,
+				10602D99A833F6C2CC23AB18 /* HebeWidgetsBundle.swift */,
+				B0BB1E0000000000000000F1 /* HebeLiveBubbleLiveActivity.swift */,
+			);
+			path = Widget;
+			sourceTree = "<group>";
+		};
+		0DC8B0CE224E2895C576B37B /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				D5EAF7E7DBC0FB5D401C3DA1 /* CloudBootstrapService.swift */,
+				9B26B41E9BB8D3BA733BF833 /* BootstrapController.swift */,
+				358066C7DD4A739964AAFC67 /* HebeLiveBubble.swift */,
+				BAE9424B6E5BF36CF31C0663 /* InventoryRepository.swift */,
+				22F07B27B5ADD4497E18C6A4 /* InventorySnapshotPublisher.swift */,
+				45FA907421DAB90A48FB88D4 /* InventorySnapshotRepublisher.swift */,
+				DA5FBF6343E4C00B28B119C3 /* PersistenceController.swift */,
+				A2D99CB99D5F2FCC4BBC2EAB /* SpotlightIndexer.swift */,
+				551925C1128C84B8D043F249 /* StatsStatusItemController.swift */,
+				002BFDF73BDB969F1DB8A690 /* TVUserSessionMonitor.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		24A0364ED61E7B5DE1587BE9 /* ShareExtension */ = {
+			isa = PBXGroup;
+			children = (
+				2333F0DCD0A5CFF048E1C444 /* SharedImportSupport.swift */,
+				AB153BA0EB06D177649DE8FB /* ShareImportPreviewView.swift */,
+				24C713D855670952882C7B0F /* ShareImportViewModel.swift */,
+				1860748C31A63C7819662719 /* ShareViewController.swift */,
+			);
+			path = ShareExtension;
+			sourceTree = "<group>";
+		};
+		32C6EFED2DC1523471831B40 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				E0FF807FAD60D92F05271FA4 /* UI */,
+				F61AEB20C96D00997714E991 /* Unit */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		3A717F9DAFD78E73E5F52A3A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B2D6D0D64A9E588D55C289E9 /* FurnitureTreeListView.swift */,
+				9CFB4AC81B6B99143AD91D90 /* InventoryHomeView.swift */,
+				A11CE5141705A1A700000001 /* SiriIntentTip.swift */,
+				5E029B6A2403DFD7FD9884D5 /* FocusHighlightRow.swift */,
+				C394DA9EA68D946B91ED04F2 /* ThingListView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		63C13BDB747F1B37A9A8DB0E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				00C64478A35E9BC2E1E8E17B /* Hebe.app */,
+				A4FEF598FE99E8729FA20D29 /* HebeShareIOS.appex */,
+				967978BF34F4C6B6703FA8CF /* HebeTests.xctest */,
+				0452D8012AC78192C812C6AE /* HebeTopShelf.appex */,
+				6571295F898E5F7AFD17690F /* HebeUITests.xctest */,
+				73904DB053E07727B6FF12C1 /* Hebe Watch.app */,
+				DF0019E0F40F9AA0ACF9D176 /* HebeWidgets.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		684F822464AD2EBDF6149502 /* Scripts */ = {
+			isa = PBXGroup;
+			children = (
+				7F2D6157EF91085D6BBC2571 /* bump_build_number.sh */,
+				4EA2E44545240BC6B2F26940 /* register_debug_widget.sh */,
+			);
+			path = Scripts;
+			sourceTree = "<group>";
+		};
+		6BF2F98DF8E56AB2320754F6 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				371712F7B49B4A10A007F55B /* InventorySnapshot.swift */,
+				F5EC710000000000000001 /* InventorySection.swift */,
+				D7DCCE14B09ABBE6CB5ABDA8 /* InventorySnapshotReader.swift */,
+				6037B6A8694FC403C78CBF6D /* SettingsStore.swift */,
+				EED5970F58422867C0D24A0E /* SharedConstants.swift */,
+				1B90E02B87818C211674D7E1 /* InventoryTransfer.swift */,
+				9E1E1D53F33B628DED305F19 /* PreviewData.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		812E020362E6354BF15303F1 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				29B5737EE2FA3B1D005AD0A1 /* Furniture.swift */,
+				9306374941FF00BB818A05A7 /* InventoryTreeNode.swift */,
+				D25D2E432B51BD3AA5DE29DA /* FurnitureThing.swift */,
+				91785C39EBAA0F60DF71521B /* Thing.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		96C8E7A965A94E6D09ECBDF5 /* Intents */ = {
+			isa = PBXGroup;
+			children = (
+				9B793BE838C440913DC6E00B /* HebeAppShortcuts.swift */,
+				6FA47BDDA3998E7CA6B14704 /* HebeControlIntents.swift */,
+				9B1D6AC59140F048E40F31D3 /* HebeIntents.swift */,
+			);
+			path = Intents;
+			sourceTree = "<group>";
+		};
+		9EB911792883ACBC8616B2BE /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				5BF1E9AFB4ECDBA9E0AEA96A /* Version.xcconfig */,
+				CEA19B1A35F2737EC3A080AF /* HebeApp.entitlements */,
+				E4D001AB68422FE3FF5BCDA3 /* HebeShare.entitlements */,
+				4D3CE0572B31CC6644F72714 /* HebeWidgets.entitlements */,
+				8C3FF8B02FCB0172001D0B0E /* HebeApp-Info.plist */,
+				8CAE16EA2FCB079500BD750D /* HebeWatch-Info.plist */,
+				8CAE16EB2FCB07F300BD750D /* HebeWidget-Info.plist */,
+				8C3FF8B12FCB0359001D0B0E /* HebeShare-Info.plist */,
+				8CAE16E92FCB077300BD750D /* HebeTopShelf-Info.plist */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+		9FCDC70402A439CA4C2BF9FD /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				FA94FF91CD29832BDFB33AFF /* App */,
+				6BF2F98DF8E56AB2320754F6 /* Common */,
+				96C8E7A965A94E6D09ECBDF5 /* Intents */,
+				812E020362E6354BF15303F1 /* Models */,
+				0DC8B0CE224E2895C576B37B /* Services */,
+				24A0364ED61E7B5DE1587BE9 /* ShareExtension */,
+				AF5F1BDB9DE2421AAE1BE07F /* TopShelf */,
+				3A717F9DAFD78E73E5F52A3A /* Views */,
+				03CF0D6E5F97BC61611B8AA8 /* Widget */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		AF5F1BDB9DE2421AAE1BE07F /* TopShelf */ = {
+			isa = PBXGroup;
+			children = (
+				D131CED905DB7B2606516AE0 /* TopShelfDiagnostics.swift */,
+				213019A7121FD6DAE90361AF /* TopShelfProvider.swift */,
+			);
+			path = TopShelf;
+			sourceTree = "<group>";
+		};
+		DEE14CBD17C5265C820AA7D1 = {
+			isa = PBXGroup;
+			children = (
+				9FCDC70402A439CA4C2BF9FD /* Sources */,
+				F73ED0116087848B1ECE12B1 /* Resources */,
+				684F822464AD2EBDF6149502 /* Scripts */,
+				9EB911792883ACBC8616B2BE /* Config */,
+				32C6EFED2DC1523471831B40 /* Tests */,
+				63C13BDB747F1B37A9A8DB0E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E0FF807FAD60D92F05271FA4 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				0412DB0BA63489C89459FD30 /* HebeUITests.swift */,
+				C0C22CB2F4CA0C1B0D17776E /* HebeUITestsLaunchTests.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		F61AEB20C96D00997714E991 /* Unit */ = {
+			isa = PBXGroup;
+			children = (
+				DFD31B7550FCCB471154B23B /* HebeInventoryMathTests.swift */,
+			);
+			path = Unit;
+			sourceTree = "<group>";
+		};
+		F73ED0116087848B1ECE12B1 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				8CAE16F02FCB357500BD750D /* Credits.rtf */,
+				4AEED7470106E0D677D4A21C /* AppIcon.icon */,
+				66D6A605F8CF0B22C4361CCB /* Assets.xcassets */,
+				5595608271AEB17F94B74C6E /* L10n.swift */,
+				C32037DC0DC2636807855C29 /* Localizable.xcstrings */,
+				331857CE4ED2C87F12441B7B /* Settings.bundle */,
+				D771BCEF0E67AD7C1D28B372 /* shelf.png */,
+				330C888B6D9757BC65844367 /* TVOSAssets.xcassets */,
+				E1C08DF186A36EDED86E93E1 /* VisionOSAssets.xcassets */,
+				0F7069A2EBFDBACCF37D7611 /* LaunchScreen.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		FA94FF91CD29832BDFB33AFF /* App */ = {
+			isa = PBXGroup;
+			children = (
+				5D75618E1E547DABBD085A14 /* HebeApp.swift */,
+				6002B66F2A76B949137FC76D /* HebeRootContainerView.swift */,
+				139C2DF397EB04AA3CC03A52 /* SettingsView.swift */,
+				2EAF23088E721721109579FA /* SplashScreenView.swift */,
+				EDF11A14E77511CDAE4EFDD7 /* TVApplicationDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		260B8D465D2B6F62FB79679D /* HebeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C1B61776760AD09B5F0CFCC1 /* Build configuration list for PBXNativeTarget "HebeTests" */;
+			buildPhases = (
+				550DFA345757787CA18EE9FF /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A22F673833BE8442C51F2DED /* PBXTargetDependency */,
+			);
+			name = HebeTests;
+			productName = HebeTests;
+			productReference = 967978BF34F4C6B6703FA8CF /* HebeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		2EEC77D8B0203E8E4DB2791F /* HebeTopShelf */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AF661AD89810C8638FC44A76 /* Build configuration list for PBXNativeTarget "HebeTopShelf" */;
+			buildPhases = (
+				65A75AD4256CD218A4DB9A21 /* Sources */,
+				B14CB80FA9AE30A9025E6AD7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9A167F09AC9E14E3204CAFED /* PBXTargetDependency */,
+			);
+			name = HebeTopShelf;
+			productName = HebeTopShelf;
+			productReference = 0452D8012AC78192C812C6AE /* HebeTopShelf.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		32F35CD654F366D95FD00926 /* HebeShare */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 02965E8BB60E190FA6C578CA /* Build configuration list for PBXNativeTarget "HebeShare" */;
+			buildPhases = (
+				34209F8DC4EA1055BBD7CE31 /* Sources */,
+				D9131E30312F854F5A0D93A8 /* Resources */,
+				798566CC398843BA378515B7 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4656D23093402792490754F6 /* PBXTargetDependency */,
+			);
+			name = HebeShare;
+			packageProductDependencies = (
+				03A5953E72B4E63B6788CD3B /* ZIPFoundation */,
+			);
+			productName = HebeShare;
+			productReference = A4FEF598FE99E8729FA20D29 /* HebeShareIOS.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		406F55E5AA4FA655E469C220 /* HebeUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A77EA5DEA7C9232FEF5FD8A4 /* Build configuration list for PBXNativeTarget "HebeUITests" */;
+			buildPhases = (
+				78597E9118B13841E9AE15E2 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AC1B518DBDCBADF294B8475F /* PBXTargetDependency */,
+			);
+			name = HebeUITests;
+			productName = HebeUITests;
+			productReference = 6571295F898E5F7AFD17690F /* HebeUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		7AFEE9EA9ACF1F42572F025E /* HebeWidgets */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7E01AA0D0DA3A97FC7E99710 /* Build configuration list for PBXNativeTarget "HebeWidgets" */;
+			buildPhases = (
+				0CAFE2D9EAEFD5FB296A124F /* Sources */,
+				7ABF9D64CF86184F5E3FEF88 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CDA9E477F2EB743E84E390E2 /* PBXTargetDependency */,
+			);
+			name = HebeWidgets;
+			productName = HebeWidgets;
+			productReference = DF0019E0F40F9AA0ACF9D176 /* HebeWidgets.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		C842AABDA598FFF80D90AD16 /* HebeWatch */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 55FB19274D5B8DA3C106E977 /* Build configuration list for PBXNativeTarget "HebeWatch" */;
+			buildPhases = (
+				940309E42E3F16C6C80C630C /* Sources */,
+				E40EF39E47CA7D931FDCF9A8 /* Resources */,
+				0D7784A46FBC28B171164144 /* Frameworks */,
+				14F47292F343710404F2E251 /* Embed Foundation Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1E0528C3EB1410EDFBFC3510 /* PBXTargetDependency */,
+				BFF62FDD97E5AB58D39C2CE6 /* PBXTargetDependency */,
+			);
+			name = HebeWatch;
+			packageProductDependencies = (
+				BC732A71926757CD32C45974 /* Euryale */,
+			);
+			productName = HebeWatch;
+			productReference = 73904DB053E07727B6FF12C1 /* Hebe Watch.app */;
+			productType = "com.apple.product-type.application";
+		};
+		E41C4748EE5C0404BB64CBDA /* HebeApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B2DC19BC43F1B3FC61D26ABD /* Build configuration list for PBXNativeTarget "HebeApp" */;
+			buildPhases = (
+				9B5FFD73332AC9227E26AD52 /* Sources */,
+				30BBF7B13B33878A604DC1BE /* Resources */,
+				2B411E94FCE806A9F08E81FB /* Frameworks */,
+				07F3B51B750FB9288DF6D498 /* Embed Foundation Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DC014D6EB9F9DE8437C235F7 /* PBXTargetDependency */,
+				77975781FBAC9A624B76750B /* PBXTargetDependency */,
+				B937EBED1EC4B9A6BB55AEE2 /* PBXTargetDependency */,
+				DBD081F94E7D6F34ED1594C8 /* PBXTargetDependency */,
+			);
+			name = HebeApp;
+			packageProductDependencies = (
+				0D6CA3C9731D74ACDFB5653B /* Euryale */,
+				EEB861C8C2A46DE21B335A67 /* ZIPFoundation */,
+			);
+			productName = HebeApp;
+			productReference = 00C64478A35E9BC2E1E8E17B /* Hebe.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0E24BB373FAEA7D50A27C05E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					260B8D465D2B6F62FB79679D = {
+						DevelopmentTeam = MZ9JSAFKPP;
+					};
+					2EEC77D8B0203E8E4DB2791F = {
+						DevelopmentTeam = MZ9JSAFKPP;
+					};
+					32F35CD654F366D95FD00926 = {
+						DevelopmentTeam = MZ9JSAFKPP;
+					};
+					406F55E5AA4FA655E469C220 = {
+						DevelopmentTeam = MZ9JSAFKPP;
+						TestTargetID = 2B637E2F4BC98238658F6576;
+					};
+					7AFEE9EA9ACF1F42572F025E = {
+						DevelopmentTeam = MZ9JSAFKPP;
+					};
+					C5C5D8588ED0EDFDB6A97740 = {
+						DevelopmentTeam = MZ9JSAFKPP;
+					};
+					C842AABDA598FFF80D90AD16 = {
+						DevelopmentTeam = MZ9JSAFKPP;
+					};
+					E41C4748EE5C0404BB64CBDA = {
+						DevelopmentTeam = MZ9JSAFKPP;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = A97DB128A9E6EC754966EC3B /* Build configuration list for PBXProject "Hebe" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				fr,
+				Base,
+			);
+			mainGroup = DEE14CBD17C5265C820AA7D1;
+			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				9A1E975654EF3AE84CB58E25 /* XCRemoteSwiftPackageReference "ZIPFoundation" */,
+				99E8F86AD38C23C5B8BC9CB8 /* XCRemoteSwiftPackageReference "Euryale" */,
+				E789415DC1CFFEFC4BE84EAA /* XCRemoteSwiftPackageReference "Stheno" */,
+			);
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 63C13BDB747F1B37A9A8DB0E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E41C4748EE5C0404BB64CBDA /* HebeApp */,
+				C842AABDA598FFF80D90AD16 /* HebeWatch */,
+				32F35CD654F366D95FD00926 /* HebeShare */,
+				2EEC77D8B0203E8E4DB2791F /* HebeTopShelf */,
+				7AFEE9EA9ACF1F42572F025E /* HebeWidgets */,
+				C5C5D8588ED0EDFDB6A97740 /* Aggregate */,
+				260B8D465D2B6F62FB79679D /* HebeTests */,
+				406F55E5AA4FA655E469C220 /* HebeUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		30BBF7B13B33878A604DC1BE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C75A91C5442AFEB7A4D49EDF /* AppIcon.icon in Resources */,
+				A636F8941F785D07CE54700A /* Assets.xcassets in Resources */,
+				98AE493B16463E2C725EC649 /* LaunchScreen.storyboard in Resources */,
+				EACFE7B4EF85C7607A8124A4 /* Localizable.xcstrings in Resources */,
+				24AAD349A43581DF4A95541A /* Settings.bundle in Resources */,
+				8CAE16F12FCB357E00BD750D /* Credits.rtf in Resources */,
+				90F1E5B95D81395738E64887 /* TVOSAssets.xcassets in Resources */,
+				1C467A039D4C4D9A718D4958 /* VisionOSAssets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7ABF9D64CF86184F5E3FEF88 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE7D79D1AB407FB7EDD98848 /* Assets.xcassets in Resources */,
+				75CC1F849AA8E28E04BFC7E6 /* Localizable.xcstrings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B14CB80FA9AE30A9025E6AD7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1C20AEE816967B4B81E6E109 /* Localizable.xcstrings in Resources */,
+				7C5023D2D1C2E5531FDAE315 /* shelf.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D9131E30312F854F5A0D93A8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2F1515A084A88C0B9EEA0917 /* Localizable.xcstrings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E40EF39E47CA7D931FDCF9A8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B37337F71123694C8B53DC91 /* AppIcon.icon in Resources */,
+				AE23440118B50E78E5FE3180 /* Assets.xcassets in Resources */,
+				F4F58A66AFB94C84AC874566 /* Localizable.xcstrings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0CAFE2D9EAEFD5FB296A124F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				573428733E4A4043314E62C5 /* Furniture.swift in Sources */,
+				7DDA53CAEA73109EB46D5FDF /* FurnitureThing.swift in Sources */,
+				FE13E9290F02FB6D6D18FE8B /* HebeControlIntents.swift in Sources */,
+				F629055DE5216599B4B2419E /* HebeControls.swift in Sources */,
+				0E6F0A071FD38E8D2A7F1A89 /* HebeInventoryWidget.swift in Sources */,
+				2C3062C037E2D638AB343377 /* HebeWidgetsBundle.swift in Sources */,
+				F5EC710000000000000005 /* InventorySection.swift in Sources */,
+				B0BB1E0000000000000000F3 /* HebeLiveBubbleLiveActivity.swift in Sources */,
+				FA06CAA7B0701E959E75CDC0 /* InventoryRepository.swift in Sources */,
+				B0E64D11D5CE9A8D0C54CD20 /* InventorySnapshot.swift in Sources */,
+				1F533A4DE4A9818874ADC3F5 /* InventorySnapshotReader.swift in Sources */,
+				CD471A9C0A5E2EA5F25D4809 /* L10n.swift in Sources */,
+				08CB65D223DBD410DDE63099 /* PersistenceController.swift in Sources */,
+				F7D208B43A2391C1CAA84BE4 /* SettingsStore.swift in Sources */,
+				8A1BC63D5FCE54AF382853B8 /* SharedConstants.swift in Sources */,
+				53C5E7B7560A8F712C3C41DF /* Thing.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		34209F8DC4EA1055BBD7CE31 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E547112718AF2502737E4DD0 /* CloudBootstrapService.swift in Sources */,
+				F5EC710000000000000003 /* InventorySection.swift in Sources */,
+				7E43C6E89AC3B14B49C20AE0 /* Furniture.swift in Sources */,
+				9BFC2A43B5E399BDD44B35DD /* FurnitureThing.swift in Sources */,
+				3F705817373E3F37758A64B0 /* FurnitureTreeListView.swift in Sources */,
+				2F6C9F533B01AD74533B6D64 /* InventoryRepository.swift in Sources */,
+				2A4EF2EEF78A033004532D54 /* InventorySnapshot.swift in Sources */,
+				A1920E95C4E9550EB230B3CB /* InventorySnapshotRepublisher.swift in Sources */,
+				F64C15506CC5E42F151623EA /* InventoryTreeNode.swift in Sources */,
+				717F13762A75A49D0E3707E4 /* L10n.swift in Sources */,
+				158A43882B6B36154A0E24BD /* PersistenceController.swift in Sources */,
+				E2435CD2EC56E491FC840634 /* SettingsStore.swift in Sources */,
+				77D052AB45740F0F9025779A /* ShareImportPreviewView.swift in Sources */,
+				699CA61E329FFA07234C2823 /* ShareImportViewModel.swift in Sources */,
+				2F37E72C56B8DB8A0029E6BF /* ShareViewController.swift in Sources */,
+				196397BDCD1651D1B4C60D56 /* SharedConstants.swift in Sources */,
+				92473BD0F75BBE6E2C46AE5B /* SharedImportSupport.swift in Sources */,
+				F99EDFC45D724A524AC516DD /* Thing.swift in Sources */,
+				BBBE322FF0D59B308D7C50E6 /* InventoryTransfer.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		550DFA345757787CA18EE9FF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C90A6C82F503ECCE95D3F902 /* HebeInventoryMathTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		65A75AD4256CD218A4DB9A21 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4D7F092B122D7201BD574EA8 /* InventorySnapshot.swift in Sources */,
+				F5EC710000000000000006 /* InventorySection.swift in Sources */,
+				E7B12B65A44D90C79A772D8C /* L10n.swift in Sources */,
+				5756634BE1043CB2B4ED878D /* SharedConstants.swift in Sources */,
+				FB11313691FD2DFE07EE9BE2 /* TopShelfDiagnostics.swift in Sources */,
+				A45066E4C68E0A8A9491AE70 /* TopShelfProvider.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		78597E9118B13841E9AE15E2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F2D058090FE4D789E37907DE /* HebeUITests.swift in Sources */,
+				ECB83FCD55242D65352D6B5D /* HebeUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		940309E42E3F16C6C80C630C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				28C1BE1CD7CE3F1F2F45BE42 /* BootstrapController.swift in Sources */,
+				4E6F14D9E7545F79144CD22A /* CloudBootstrapService.swift in Sources */,
+				E88179347CF784C31756FF02 /* Furniture.swift in Sources */,
+				A9E3D1A4CC5D6E23816ED2CA /* FurnitureThing.swift in Sources */,
+				46CD55DBE723515EE07136DB /* FurnitureTreeListView.swift in Sources */,
+				A487A3165ECB5EA9D8FE8483 /* HebeApp.swift in Sources */,
+				5E5446CC9E1AD054958B1DEF /* HebeLiveBubble.swift in Sources */,
+				1C2C0B244107D23FF9FC6828 /* HebeRootContainerView.swift in Sources */,
+				624AF6581AEFDBCD96560A91 /* InventoryHomeView.swift in Sources */,
+				F5EC710000000000000004 /* InventorySection.swift in Sources */,
+				A11CE5141705A1A700000003 /* SiriIntentTip.swift in Sources */,
+				B3C8D0406E19D7E7D77C407A /* InventoryRepository.swift in Sources */,
+				DCA1C10C095DD7076B06582D /* InventorySnapshot.swift in Sources */,
+				AFBFF5CE82AE9598E57A3483 /* InventorySnapshotPublisher.swift in Sources */,
+				EE6957D328E7960A7DB7E2B8 /* InventorySnapshotReader.swift in Sources */,
+				F7662592614F14BFB03B87EF /* InventorySnapshotRepublisher.swift in Sources */,
+				E53BE5AEA71B1EFC5F9F982D /* InventoryTreeNode.swift in Sources */,
+				CBF85E22FBECF160A1ABA396 /* L10n.swift in Sources */,
+				64F28FB888FE86C86E388357 /* PersistenceController.swift in Sources */,
+				E6300C3B634361C456C596B9 /* SettingsStore.swift in Sources */,
+				D6285CAB0DED1C96141D6A55 /* SettingsView.swift in Sources */,
+				48C2E55376B427C3683353FA /* SharedConstants.swift in Sources */,
+				9245A3506BC2D2F04D0E8D10 /* SplashScreenView.swift in Sources */,
+				1B494DE486ABFBAEC213D3B9 /* Thing.swift in Sources */,
+				AB80BBA794BF5485D0F14378 /* ThingListView.swift in Sources */,
+				D0E3E3A113D325AB843F6483 /* PreviewData.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9B5FFD73332AC9227E26AD52 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8AAC4D5ABB59E88A75D1F0E8 /* BootstrapController.swift in Sources */,
+				B8912DE25746738C3EDFDA2D /* CloudBootstrapService.swift in Sources */,
+				F99AE69F099D31E9680E416D /* Furniture.swift in Sources */,
+				922B92512E84592398FF4FCA /* FurnitureThing.swift in Sources */,
+				FDA817AD6F4A1DDEA9D57B72 /* FurnitureTreeListView.swift in Sources */,
+				3A6E4107B06A9EF438A541C9 /* HebeApp.swift in Sources */,
+				2D94946F93AFE024A9A20D62 /* HebeAppShortcuts.swift in Sources */,
+				12856A4F2F0FC788BF5D2DEA /* HebeControlIntents.swift in Sources */,
+				E130AF9DBC2B6F1B9EC1E6BD /* HebeIntents.swift in Sources */,
+				B7637C8B3167F41C773ADA8A /* HebeLiveBubble.swift in Sources */,
+				BD08065CE27AE25A574AF82E /* HebeRootContainerView.swift in Sources */,
+				2B58428E8C240C5B81007C22 /* InventoryHomeView.swift in Sources */,
+				F5EC710000000000000002 /* InventorySection.swift in Sources */,
+				B0BB1E0000000000000000F2 /* HebeLiveBubbleLiveActivity.swift in Sources */,
+				A11CE5141705A1A700000002 /* SiriIntentTip.swift in Sources */,
+				F018AC3D25F6936377C3A174 /* InventoryRepository.swift in Sources */,
+				A290ACACFE9E9F39E1275444 /* InventorySnapshot.swift in Sources */,
+				1C72DE775F9FA3F59597C067 /* InventorySnapshotPublisher.swift in Sources */,
+				DD0D5BA4FC5574F4A32938FA /* InventorySnapshotReader.swift in Sources */,
+				091ADEE04FF1DEB655207074 /* InventorySnapshotRepublisher.swift in Sources */,
+				D0905AE2D0C82CC605997943 /* InventoryTreeNode.swift in Sources */,
+				7DEC3D7C4CAC0EBE3DB16B82 /* L10n.swift in Sources */,
+				B8BA0DA8A05E80BB0E05BCD3 /* PersistenceController.swift in Sources */,
+				17CD7AB764C040C56137ED8B /* SettingsStore.swift in Sources */,
+				ADF1BF7CDF3B2D51ED3383F8 /* SettingsView.swift in Sources */,
+				0007AD2F0133DDDBA0218001 /* SharedConstants.swift in Sources */,
+				22F5E0FE405CA9CD535E5253 /* SplashScreenView.swift in Sources */,
+				D7062E04DA3508BF5AE15BF2 /* SpotlightIndexer.swift in Sources */,
+				59D32254A4C9605F6CED174A /* StatsStatusItemController.swift in Sources */,
+				0E7EF34C5D696262D29ACFDE /* TVApplicationDelegate.swift in Sources */,
+				C9855CAC9563A53EE2450073 /* TVUserSessionMonitor.swift in Sources */,
+				DB3BA98DFAD890BA5FFB2C38 /* Thing.swift in Sources */,
+				F017972C10F66B45CD729D12 /* TopShelfDiagnostics.swift in Sources */,
+				C15959D08B223E3619249CCC /* InventoryTransfer.swift in Sources */,
+				C89846F583D2BCEE05828D76 /* FocusHighlightRow.swift in Sources */,
+				57B0A8EF7F4778A717BBB22C /* ThingListView.swift in Sources */,
+				9707E34400AFF6650357D6D5 /* PreviewData.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1E0528C3EB1410EDFBFC3510 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C5C5D8588ED0EDFDB6A97740 /* Aggregate */;
+			targetProxy = A839AEE907A2664BD3991BDF /* PBXContainerItemProxy */;
+		};
+		4656D23093402792490754F6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C5C5D8588ED0EDFDB6A97740 /* Aggregate */;
+			targetProxy = 0471F26F3C85A89181C8A590 /* PBXContainerItemProxy */;
+		};
+		77975781FBAC9A624B76750B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			platformFilters = (
+				ios,
+				maccatalyst,
+				macos,
+				xros,
+			);
+			target = 32F35CD654F366D95FD00926 /* HebeShare */;
+			targetProxy = 95F141A49EB84159E5C8A388 /* PBXContainerItemProxy */;
+		};
+		9A167F09AC9E14E3204CAFED /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C5C5D8588ED0EDFDB6A97740 /* Aggregate */;
+			targetProxy = E43BC4984B7BE76B75D1E9F4 /* PBXContainerItemProxy */;
+		};
+		A22F673833BE8442C51F2DED /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C5C5D8588ED0EDFDB6A97740 /* Aggregate */;
+			targetProxy = CBF05D166DDEC8B4C5D7BCC4 /* PBXContainerItemProxy */;
+		};
+		AC1B518DBDCBADF294B8475F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C5C5D8588ED0EDFDB6A97740 /* Aggregate */;
+			targetProxy = A9191A85E8F3244D3FD35F9F /* PBXContainerItemProxy */;
+		};
+		B937EBED1EC4B9A6BB55AEE2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			platformFilters = (
+				ios,
+				maccatalyst,
+				macos,
+				xros,
+			);
+			target = 7AFEE9EA9ACF1F42572F025E /* HebeWidgets */;
+			targetProxy = B3DD6808F3DA870C1B7BF991 /* PBXContainerItemProxy */;
+		};
+		BFF62FDD97E5AB58D39C2CE6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			platformFilters = (
+				watchos,
+			);
+			target = 7AFEE9EA9ACF1F42572F025E /* HebeWidgets */;
+			targetProxy = AAD008678E59BF126A32740D /* PBXContainerItemProxy */;
+		};
+		CDA9E477F2EB743E84E390E2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C5C5D8588ED0EDFDB6A97740 /* Aggregate */;
+			targetProxy = 75B4788EE1D27979E3902B8B /* PBXContainerItemProxy */;
+		};
+		DBD081F94E7D6F34ED1594C8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			platformFilters = (
+				tvos,
+			);
+			target = 2EEC77D8B0203E8E4DB2791F /* HebeTopShelf */;
+			targetProxy = 8F35D32863CF6B592CAFC407 /* PBXContainerItemProxy */;
+		};
+		DC014D6EB9F9DE8437C235F7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C5C5D8588ED0EDFDB6A97740 /* Aggregate */;
+			targetProxy = E1DF6E5CFF0A707D9351C729 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		02D6ABA1A9D543FF93B61BE6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEAD_CODE_STRIPPING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		06DF83F95D2EDCC415E8C39A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Config/HebeApp.entitlements;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Config/HebeWatch-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = Hebe;
+				INFOPLIST_KEY_WKWatchOnly = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lesvagabondages.hebe.watchapp;
+				PRODUCT_NAME = "Hebe Watch";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 11;
+			};
+			name = Release;
+		};
+		43A52B92579771B9D9D5B217 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = Config/HebeShare.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
+				"CODE_SIGN_STYLE[sdk=macosx*]" = Automatic;
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_INCOMING_NETWORK_CONNECTIONS = NO;
+				ENABLE_OUTGOING_NETWORK_CONNECTIONS = NO;
+				ENABLE_RESOURCE_ACCESS_AUDIO_INPUT = NO;
+				ENABLE_RESOURCE_ACCESS_BLUETOOTH = NO;
+				ENABLE_RESOURCE_ACCESS_CALENDARS = NO;
+				ENABLE_RESOURCE_ACCESS_CAMERA = NO;
+				ENABLE_RESOURCE_ACCESS_CONTACTS = NO;
+				ENABLE_RESOURCE_ACCESS_LOCATION = NO;
+				ENABLE_RESOURCE_ACCESS_PRINTING = NO;
+				ENABLE_RESOURCE_ACCESS_USB = NO;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Config/HebeShare-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = Hebe;
+				IPHONEOS_DEPLOYMENT_TARGET = 17;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 14;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lesvagabondages.hebe.share;
+				PRODUCT_NAME = HebeShareIOS;
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=macosx*]" = "";
+				REGISTER_APP_GROUPS = YES;
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
+				SUPPORTS_MACCATALYST = YES;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = YES;
+				TARGETED_DEVICE_FAMILY = "1,2,7";
+				XROS_DEPLOYMENT_TARGET = 1;
+			};
+			name = Release;
+		};
+		51A898489211676A4E9DDEF2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Config/HebeApp.entitlements;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Config/HebeWatch-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = Hebe;
+				INFOPLIST_KEY_WKWatchOnly = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lesvagabondages.hebe.watchapp;
+				PRODUCT_NAME = "Hebe Watch";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 11;
+			};
+			name = Debug;
+		};
+		74B476811DE4452B9AE4D3AE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.lesvagabondages.hebe.tests;
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = YES;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HebeCompat.app/HebeCompat";
+			};
+			name = Release;
+		};
+		7E9F006E9553C3E7ADF79CC7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"ASSETCATALOG_COMPILER_APPICON_NAME[sdk=appletvos*]" = "AppIcon-tvOS";
+				"ASSETCATALOG_COMPILER_APPICON_NAME[sdk=appletvsimulator*]" = "AppIcon-tvOS";
+				"ASSETCATALOG_COMPILER_APPICON_NAME[sdk=xros*]" = "AppIcon-vision";
+				"ASSETCATALOG_COMPILER_APPICON_NAME[sdk=xrsimulator*]" = "AppIcon-vision";
+				CODE_SIGN_ENTITLEMENTS = Config/HebeApp.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				ENABLE_APP_SANDBOX = YES;
+				"ENABLE_HARDENED_RUNTIME[sdk=macosx*]" = YES;
+				ENABLE_INCOMING_NETWORK_CONNECTIONS = NO;
+				ENABLE_OUTGOING_NETWORK_CONNECTIONS = YES;
+				ENABLE_RESOURCE_ACCESS_AUDIO_INPUT = NO;
+				ENABLE_RESOURCE_ACCESS_BLUETOOTH = NO;
+				ENABLE_RESOURCE_ACCESS_CALENDARS = NO;
+				ENABLE_RESOURCE_ACCESS_CAMERA = NO;
+				ENABLE_RESOURCE_ACCESS_CONTACTS = NO;
+				ENABLE_RESOURCE_ACCESS_LOCATION = NO;
+				ENABLE_RESOURCE_ACCESS_PRINTING = NO;
+				ENABLE_RESOURCE_ACCESS_USB = NO;
+				ENABLE_USER_SELECTED_FILES = readwrite;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Config/HebeApp-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = Hebe;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
+				INFOPLIST_KEY_NSSupportsLiveActivities = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				"INFOPLIST_KEY_UILaunchStoryboardName[sdk=iphoneos*]" = LaunchScreen;
+				"INFOPLIST_KEY_UILaunchStoryboardName[sdk=iphonesimulator*]" = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 17;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 14;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lesvagabondages.hebe;
+				PRODUCT_NAME = Hebe;
+				REGISTER_APP_GROUPS = YES;
+				"REGISTER_APP_GROUPS[sdk=macosx*]" = YES;
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "appletvos appletvsimulator iphoneos iphonesimulator macosx xros xrsimulator";
+				SUPPORTS_MACCATALYST = YES;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = YES;
+				TARGETED_DEVICE_FAMILY = "1,2,3,7";
+				TVOS_DEPLOYMENT_TARGET = 17;
+				XROS_DEPLOYMENT_TARGET = 2;
+			};
+			name = Debug;
+		};
+		9664155B155E74A43FFC31B6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = Config/HebeWidgets.entitlements;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Config/HebeWidget-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Hebe Widgets";
+				IPHONEOS_DEPLOYMENT_TARGET = 17;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 14;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lesvagabondages.hebe.widgets;
+				"PRODUCT_BUNDLE_IDENTIFIER[sdk=watchos*]" = com.lesvagabondages.hebe.watchapp.widgets;
+				"PRODUCT_BUNDLE_IDENTIFIER[sdk=watchsimulator*]" = com.lesvagabondages.hebe.watchapp.widgets;
+				PRODUCT_NAME = HebeWidgets;
+				REGISTER_APP_GROUPS = YES;
+				SDKROOT = macosx;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator watchos watchsimulator xros xrsimulator macosx";
+				SUPPORTS_MACCATALYST = YES;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = YES;
+				TARGETED_DEVICE_FAMILY = "1,2,4,7";
+				TVOS_DEPLOYMENT_TARGET = 16.6;
+				WATCHOS_DEPLOYMENT_TARGET = 10;
+				XROS_DEPLOYMENT_TARGET = 2;
+			};
+			name = Release;
+		};
+		A81C0E315E2DFD52759D654F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.lesvagabondages.hebe.uitests;
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = YES;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = HebeCompat;
+			};
+			name = Debug;
+		};
+		A998D4441D2A4392BB41537D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEAD_CODE_STRIPPING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		AC4D4132F55C79B179828201 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5BF1E9AFB4ECDBA9E0AEA96A /* Version.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_LANGUAGE = en;
+				DEVELOPMENT_TEAM = MZ9JSAFKPP;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				MACOSX_DEPLOYMENT_TARGET = 15.0;
+				MARKETING_VERSION = 1.0.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 6.0;
+				TVOS_DEPLOYMENT_TARGET = 18.0;
+				WATCHOS_DEPLOYMENT_TARGET = 11.0;
+				XROS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Release;
+		};
+		B5574C47F63D11FFB840A98D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = Config/HebeWidgets.entitlements;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Config/HebeWidget-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Hebe Widgets";
+				IPHONEOS_DEPLOYMENT_TARGET = 17;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 14;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lesvagabondages.hebe.widgets;
+				"PRODUCT_BUNDLE_IDENTIFIER[sdk=watchos*]" = com.lesvagabondages.hebe.watchapp.widgets;
+				"PRODUCT_BUNDLE_IDENTIFIER[sdk=watchsimulator*]" = com.lesvagabondages.hebe.watchapp.widgets;
+				PRODUCT_NAME = HebeWidgets;
+				REGISTER_APP_GROUPS = YES;
+				SDKROOT = macosx;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator watchos watchsimulator xros xrsimulator macosx";
+				SUPPORTS_MACCATALYST = YES;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = YES;
+				TARGETED_DEVICE_FAMILY = "1,2,4,7";
+				TVOS_DEPLOYMENT_TARGET = 16.6;
+				WATCHOS_DEPLOYMENT_TARGET = 10;
+				XROS_DEPLOYMENT_TARGET = 2;
+			};
+			name = Debug;
+		};
+		C9D36DF287DF5C2BF0C2EA80 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = Config/HebeWidgets.entitlements;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Config/HebeTopShelf-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Hebe TopShelf";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.lesvagabondages.hebe.topshelf;
+				PRODUCT_NAME = HebeTopShelf;
+				SDKROOT = appletvos;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 15;
+			};
+			name = Debug;
+		};
+		CE5842F98962EF324434CF0F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = Config/HebeWidgets.entitlements;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Config/HebeTopShelf-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Hebe TopShelf";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.lesvagabondages.hebe.topshelf;
+				PRODUCT_NAME = HebeTopShelf;
+				SDKROOT = appletvos;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 15;
+			};
+			name = Release;
+		};
+		D798737C8AC20CEE80B48124 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.lesvagabondages.hebe.uitests;
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = YES;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = HebeCompat;
+			};
+			name = Release;
+		};
+		DF26D35F9027FEE0E8C015F8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"ASSETCATALOG_COMPILER_APPICON_NAME[sdk=appletvos*]" = "AppIcon-tvOS";
+				"ASSETCATALOG_COMPILER_APPICON_NAME[sdk=appletvsimulator*]" = "AppIcon-tvOS";
+				"ASSETCATALOG_COMPILER_APPICON_NAME[sdk=xros*]" = "AppIcon-vision";
+				"ASSETCATALOG_COMPILER_APPICON_NAME[sdk=xrsimulator*]" = "AppIcon-vision";
+				CODE_SIGN_ENTITLEMENTS = Config/HebeApp.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				ENABLE_APP_SANDBOX = YES;
+				"ENABLE_HARDENED_RUNTIME[sdk=macosx*]" = YES;
+				ENABLE_INCOMING_NETWORK_CONNECTIONS = NO;
+				ENABLE_OUTGOING_NETWORK_CONNECTIONS = YES;
+				ENABLE_RESOURCE_ACCESS_AUDIO_INPUT = NO;
+				ENABLE_RESOURCE_ACCESS_BLUETOOTH = NO;
+				ENABLE_RESOURCE_ACCESS_CALENDARS = NO;
+				ENABLE_RESOURCE_ACCESS_CAMERA = NO;
+				ENABLE_RESOURCE_ACCESS_CONTACTS = NO;
+				ENABLE_RESOURCE_ACCESS_LOCATION = NO;
+				ENABLE_RESOURCE_ACCESS_PRINTING = NO;
+				ENABLE_RESOURCE_ACCESS_USB = NO;
+				ENABLE_USER_SELECTED_FILES = readwrite;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Config/HebeApp-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = Hebe;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
+				INFOPLIST_KEY_NSSupportsLiveActivities = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				"INFOPLIST_KEY_UILaunchStoryboardName[sdk=iphoneos*]" = LaunchScreen;
+				"INFOPLIST_KEY_UILaunchStoryboardName[sdk=iphonesimulator*]" = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 17;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 14;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lesvagabondages.hebe;
+				PRODUCT_NAME = Hebe;
+				REGISTER_APP_GROUPS = YES;
+				"REGISTER_APP_GROUPS[sdk=macosx*]" = YES;
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "appletvos appletvsimulator iphoneos iphonesimulator macosx xros xrsimulator";
+				SUPPORTS_MACCATALYST = YES;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = YES;
+				TARGETED_DEVICE_FAMILY = "1,2,3,7";
+				TVOS_DEPLOYMENT_TARGET = 17;
+				XROS_DEPLOYMENT_TARGET = 2;
+			};
+			name = Release;
+		};
+		E49A607714FD9DCA5DA1EFE6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5BF1E9AFB4ECDBA9E0AEA96A /* Version.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_LANGUAGE = en;
+				DEVELOPMENT_TEAM = MZ9JSAFKPP;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				MACOSX_DEPLOYMENT_TARGET = 15.0;
+				MARKETING_VERSION = 1.0.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 6.0;
+				TVOS_DEPLOYMENT_TARGET = 18.0;
+				WATCHOS_DEPLOYMENT_TARGET = 11.0;
+				XROS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Debug;
+		};
+		F5C8F1CFF1B9DB630D8D2167 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = Config/HebeShare.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
+				"CODE_SIGN_STYLE[sdk=macosx*]" = Automatic;
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_INCOMING_NETWORK_CONNECTIONS = NO;
+				ENABLE_OUTGOING_NETWORK_CONNECTIONS = NO;
+				ENABLE_RESOURCE_ACCESS_AUDIO_INPUT = NO;
+				ENABLE_RESOURCE_ACCESS_BLUETOOTH = NO;
+				ENABLE_RESOURCE_ACCESS_CALENDARS = NO;
+				ENABLE_RESOURCE_ACCESS_CAMERA = NO;
+				ENABLE_RESOURCE_ACCESS_CONTACTS = NO;
+				ENABLE_RESOURCE_ACCESS_LOCATION = NO;
+				ENABLE_RESOURCE_ACCESS_PRINTING = NO;
+				ENABLE_RESOURCE_ACCESS_USB = NO;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Config/HebeShare-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = Hebe;
+				IPHONEOS_DEPLOYMENT_TARGET = 17;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 14;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lesvagabondages.hebe.share;
+				PRODUCT_NAME = HebeShareIOS;
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=macosx*]" = "";
+				REGISTER_APP_GROUPS = YES;
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
+				SUPPORTS_MACCATALYST = YES;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = YES;
+				TARGETED_DEVICE_FAMILY = "1,2,7";
+				XROS_DEPLOYMENT_TARGET = 1;
+			};
+			name = Debug;
+		};
+		FAF5FD61EAF92D6968796523 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.lesvagabondages.hebe.tests;
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = YES;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HebeCompat.app/HebeCompat";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		02965E8BB60E190FA6C578CA /* Build configuration list for PBXNativeTarget "HebeShare" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F5C8F1CFF1B9DB630D8D2167 /* Debug */,
+				43A52B92579771B9D9D5B217 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		55FB19274D5B8DA3C106E977 /* Build configuration list for PBXNativeTarget "HebeWatch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				51A898489211676A4E9DDEF2 /* Debug */,
+				06DF83F95D2EDCC415E8C39A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		7E01AA0D0DA3A97FC7E99710 /* Build configuration list for PBXNativeTarget "HebeWidgets" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B5574C47F63D11FFB840A98D /* Debug */,
+				9664155B155E74A43FFC31B6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		A77EA5DEA7C9232FEF5FD8A4 /* Build configuration list for PBXNativeTarget "HebeUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A81C0E315E2DFD52759D654F /* Debug */,
+				D798737C8AC20CEE80B48124 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		A97DB128A9E6EC754966EC3B /* Build configuration list for PBXProject "Hebe" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E49A607714FD9DCA5DA1EFE6 /* Debug */,
+				AC4D4132F55C79B179828201 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		AF661AD89810C8638FC44A76 /* Build configuration list for PBXNativeTarget "HebeTopShelf" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C9D36DF287DF5C2BF0C2EA80 /* Debug */,
+				CE5842F98962EF324434CF0F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		B2DC19BC43F1B3FC61D26ABD /* Build configuration list for PBXNativeTarget "HebeApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7E9F006E9553C3E7ADF79CC7 /* Debug */,
+				DF26D35F9027FEE0E8C015F8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		C1B61776760AD09B5F0CFCC1 /* Build configuration list for PBXNativeTarget "HebeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FAF5FD61EAF92D6968796523 /* Debug */,
+				74B476811DE4452B9AE4D3AE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		EFDE50BFA0490A019452D7AA /* Build configuration list for PBXAggregateTarget "Aggregate" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A998D4441D2A4392BB41537D /* Debug */,
+				02D6ABA1A9D543FF93B61BE6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		99E8F86AD38C23C5B8BC9CB8 /* XCRemoteSwiftPackageReference "Euryale" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/auvents-brave/Euryale.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+		9A1E975654EF3AE84CB58E25 /* XCRemoteSwiftPackageReference "ZIPFoundation" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/weichsel/ZIPFoundation.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.9.20;
+			};
+		};
+		E789415DC1CFFEFC4BE84EAA /* XCRemoteSwiftPackageReference "Stheno" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/auvents-brave/Stheno.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		03A5953E72B4E63B6788CD3B /* ZIPFoundation */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9A1E975654EF3AE84CB58E25 /* XCRemoteSwiftPackageReference "ZIPFoundation" */;
+			productName = ZIPFoundation;
+		};
+		0D6CA3C9731D74ACDFB5653B /* Euryale */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 99E8F86AD38C23C5B8BC9CB8 /* XCRemoteSwiftPackageReference "Euryale" */;
+			productName = Euryale;
+		};
+		BC732A71926757CD32C45974 /* Euryale */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 99E8F86AD38C23C5B8BC9CB8 /* XCRemoteSwiftPackageReference "Euryale" */;
+			productName = Euryale;
+		};
+		EEB861C8C2A46DE21B335A67 /* ZIPFoundation */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9A1E975654EF3AE84CB58E25 /* XCRemoteSwiftPackageReference "ZIPFoundation" */;
+			productName = ZIPFoundation;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 0E24BB373FAEA7D50A27C05E /* Project object */;
+}

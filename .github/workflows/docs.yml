@@ -1,0 +1,97 @@
+name: Documentation
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+concurrency:
+  group: ci-${{ github.repository }}-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
+jobs:
+  build:
+    runs-on: macos-26
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Xcode
+        uses: maxim-lobanov/setup-xcode@v1
+        with:
+          xcode-version: "26.5"
+
+      - name: Build DocC archive
+        run: |
+          xcodebuild docbuild \
+            -project "Hebe.xcodeproj" \
+            -scheme "HebeApp" \
+            -destination "generic/platform=macOS" \
+            -derivedDataPath "$PWD/.derivedData" \
+            CODE_SIGNING_ALLOWED=NO
+
+      - name: Export DocC static site
+        run: |
+          ARCHIVE_PATH="$(find "$PWD/.derivedData" -type d -name "Hebe.doccarchive" -print -quit)"
+          if [ -z "$ARCHIVE_PATH" ]; then
+            echo "Hebe.doccarchive not found"
+            exit 1
+          fi
+          xcrun docc process-archive transform-for-static-hosting "$ARCHIVE_PATH" \
+            --output-path "$PWD/docs" \
+            --hosting-base-path "Hebe"
+
+      - name: Normalize base path for GitHub Pages
+        run: |
+          INDEX="$PWD/docs/index.html"
+          if grep -q 'var baseUrl = "/"' "$INDEX"; then
+            sed -i '' 's#var baseUrl = "/"#var baseUrl = "/Hebe/"#g' "$INDEX"
+            sed -i '' 's#href="/#href="/Hebe/#g' "$INDEX"
+            sed -i '' 's#src="/#src="/Hebe/#g' "$INDEX"
+          fi
+
+      - name: Set root redirect to module docs
+        run: |
+          cat > "$PWD/docs/index.html" <<'HTML'
+          <!doctype html>
+          <html lang="en">
+            <head>
+              <meta charset="utf-8">
+              <meta http-equiv="refresh" content="0; url=/Hebe/documentation/hebe/">
+              <script>window.location.replace("/Hebe/documentation/hebe/")</script>
+              <title>Hebe Documentation</title>
+            </head>
+            <body>
+              Redirecting to <a href="/Hebe/documentation/hebe/">Hebe documentation</a>...
+            </body>
+          </html>
+          HTML
+
+      - name: Validate docs entrypoint
+        run: |
+          if [ ! -f "$PWD/docs/documentation/hebe/index.html" ]; then
+            echo "Missing docs/documentation/hebe/index.html"
+            find "$PWD/docs" -maxdepth 3 -type f | sed -n '1,120p'
+            exit 1
+          fi
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./docs
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
