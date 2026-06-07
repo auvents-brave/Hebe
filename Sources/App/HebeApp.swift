@@ -273,7 +273,7 @@ private final class NotificationBootstrap {
     }
 
     private func registerForRemoteNotifications() {
-        OSApplication.osShared.registerForRemoteNotifications()
+        PlatformApplication.platformShared.registerForRemoteNotifications()
     }
 }
 

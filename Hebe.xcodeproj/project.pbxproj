@@ -117,7 +117,7 @@
 		D0E3E3A113D325AB843F6483 /* PreviewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E1E1D53F33B628DED305F19 /* PreviewData.swift */; };
 		D1211DB3E7119D3521BCEC66 /* Euryale in Frameworks */ = {isa = PBXBuildFile; productRef = 0D6CA3C9731D74ACDFB5653B /* Euryale */; };
 		D6285CAB0DED1C96141D6A55 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 139C2DF397EB04AA3CC03A52 /* SettingsView.swift */; };
-		D7062E04DA3508BF5AE15BF2 /* SpotlightIndexer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D99CB99D5F2FCC4BBC2EAB /* SpotlightIndexer.swift */; platformFilters = (ios, macos, xros, ); };
+		D7062E04DA3508BF5AE15BF2 /* SpotlightIndexer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D99CB99D5F2FCC4BBC2EAB /* SpotlightIndexer.swift */; platformFilters = (ios, maccatalyst, macos, xros, ); };
 		DB3BA98DFAD890BA5FFB2C38 /* Thing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91785C39EBAA0F60DF71521B /* Thing.swift */; };
 		DCA1C10C095DD7076B06582D /* InventorySnapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 371712F7B49B4A10A007F55B /* InventorySnapshot.swift */; };
 		DD0D5BA4FC5574F4A32938FA /* InventorySnapshotReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7DCCE14B09ABBE6CB5ABDA8 /* InventorySnapshotReader.swift */; };
@@ -1243,7 +1243,7 @@
 				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = YES;
 				TARGETED_DEVICE_FAMILY = "1,2,3,7";
 				TVOS_DEPLOYMENT_TARGET = 17;
-				XROS_DEPLOYMENT_TARGET = 2;
+				XROS_DEPLOYMENT_TARGET = 26.0;
 			};
 			name = Debug;
 		};
@@ -1274,7 +1274,7 @@
 				TARGETED_DEVICE_FAMILY = "1,2,4,7";
 				TVOS_DEPLOYMENT_TARGET = 16.6;
 				WATCHOS_DEPLOYMENT_TARGET = 10;
-				XROS_DEPLOYMENT_TARGET = 2;
+				XROS_DEPLOYMENT_TARGET = 26.0;
 			};
 			name = Release;
 		};
@@ -1405,7 +1405,7 @@
 				TARGETED_DEVICE_FAMILY = "1,2,4,7";
 				TVOS_DEPLOYMENT_TARGET = 16.6;
 				WATCHOS_DEPLOYMENT_TARGET = 10;
-				XROS_DEPLOYMENT_TARGET = 2;
+				XROS_DEPLOYMENT_TARGET = 26.0;
 			};
 			name = Debug;
 		};
@@ -1521,7 +1521,7 @@
 				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = YES;
 				TARGETED_DEVICE_FAMILY = "1,2,3,7";
 				TVOS_DEPLOYMENT_TARGET = 17;
-				XROS_DEPLOYMENT_TARGET = 2;
+				XROS_DEPLOYMENT_TARGET = 26.0;
 			};
 			name = Release;
 		};
