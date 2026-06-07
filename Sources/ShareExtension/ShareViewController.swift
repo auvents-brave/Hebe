@@ -10,7 +10,7 @@ typealias PlatformViewController = UIViewController
 
 @objc(ShareViewController)
 final class ShareViewController: PlatformViewController {
-    #if os(iOS)
+    #if os(iOS) || os(visionOS)
     private var hostingController: UIHostingController<ShareImportPreviewView>?
     #endif
     
@@ -26,14 +26,14 @@ final class ShareViewController: PlatformViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        #if os(iOS)
+        #if os(iOS) || os(visionOS)
         setupIOSPreviewUI()
         #else
         setupMacOSMinimalUI()
         #endif
     }
 
-    #if os(iOS)
+    #if os(iOS) || os(visionOS)
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         viewModel?.loadIfNeeded()
@@ -47,7 +47,7 @@ final class ShareViewController: PlatformViewController {
 
     // MARK: - iOS Preview UI Setup
 
-    #if os(iOS)
+    #if os(iOS) || os(visionOS)
     private func setupIOSPreviewUI() {
         view.backgroundColor = .systemBackground
 
