@@ -28,7 +28,9 @@ enum InventorySnapshotPublisher {
 
         guard let snapshot else { return }
 
-        #if os(iOS) || os(macOS) || os(visionOS)
+        // Spotlight indexing is excluded on Mac Catalyst (matching the rest of the
+        // app — `SpotlightIndexer` is not built there).
+        #if (os(iOS) && !targetEnvironment(macCatalyst)) || os(macOS) || os(visionOS)
             SpotlightIndexer.reindex(using: snapshot, context: readContext)
         #endif
 
