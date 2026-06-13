@@ -1,121 +1,121 @@
 import SwiftUI
 
 #if os(macOS)
-import AppKit
-typealias PlatformViewController = NSViewController
+	import AppKit
+	typealias PlatformViewController = NSViewController
 #else
-import UIKit
-typealias PlatformViewController = UIViewController
+	import UIKit
+	typealias PlatformViewController = UIViewController
 #endif
 
 @objc(ShareViewController)
 final class ShareViewController: PlatformViewController {
-    #if os(iOS)
-    private var hostingController: UIHostingController<ShareImportPreviewView>?
-    #endif
-    
-    private var viewModel: ShareImportViewModel?
-    private var didTriggerImport = false
+	#if os(iOS) || os(visionOS)
+		private var hostingController: UIHostingController<ShareImportPreviewView>?
+	#endif
 
-    #if os(macOS)
-    override func loadView() {
-        view = NSView()
-    }
-    #endif
+	private var viewModel: ShareImportViewModel?
+	private var didTriggerImport = false
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
+	#if os(macOS)
+		override func loadView() {
+			view = NSView()
+		}
+	#endif
 
-        #if os(iOS)
-        setupIOSPreviewUI()
-        #else
-        setupMacOSMinimalUI()
-        #endif
-    }
+	override func viewDidLoad() {
+		super.viewDidLoad()
 
-    #if os(iOS)
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        viewModel?.loadIfNeeded()
-    }
-    #else
-    override func viewDidAppear() {
-        super.viewDidAppear()
-        importIfNeeded()
-    }
-    #endif
+		#if os(iOS) || os(visionOS)
+			setupIOSPreviewUI()
+		#else
+			setupMacOSMinimalUI()
+		#endif
+	}
 
-    // MARK: - iOS Preview UI Setup
+	#if os(iOS) || os(visionOS)
+		override func viewDidAppear(_ animated: Bool) {
+			super.viewDidAppear(animated)
+			viewModel?.loadIfNeeded()
+		}
+	#else
+		override func viewDidAppear() {
+			super.viewDidAppear()
+			importIfNeeded()
+		}
+	#endif
 
-    #if os(iOS)
-    private func setupIOSPreviewUI() {
-        view.backgroundColor = .systemBackground
+	// MARK: - iOS Preview UI Setup
 
-        let viewModel = ShareImportViewModel(extensionContext: extensionContext)
-        let rootView = ShareImportPreviewView(viewModel: viewModel)
-        let hostingController = UIHostingController(rootView: rootView)
-        
-        addChild(hostingController)
-        hostingController.view.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(hostingController.view)
-        
-        NSLayoutConstraint.activate([
-            hostingController.view.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            hostingController.view.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            hostingController.view.topAnchor.constraint(equalTo: view.topAnchor),
-            hostingController.view.bottomAnchor.constraint(equalTo: view.bottomAnchor),
-        ])
-        
-        hostingController.didMove(toParent: self)
-        self.hostingController = hostingController
-        self.viewModel = viewModel
-        
-        preferredContentSize = CGSize(width: 700, height: 640)
-    }
-    #endif
+	#if os(iOS) || os(visionOS)
+		private func setupIOSPreviewUI() {
+			view.backgroundColor = .systemBackground
 
-    // MARK: - macOS Direct Import
+			let viewModel = ShareImportViewModel(extensionContext: extensionContext)
+			let rootView = ShareImportPreviewView(viewModel: viewModel)
+			let hostingController = UIHostingController(rootView: rootView)
 
-    #if os(macOS)
-    private func setupMacOSMinimalUI() {
-        preferredContentSize = NSSize(width: 320, height: 120)
-    }
+			addChild(hostingController)
+			hostingController.view.translatesAutoresizingMaskIntoConstraints = false
+			view.addSubview(hostingController.view)
 
-    private func importIfNeeded() {
-        guard didTriggerImport == false else { return }
-        didTriggerImport = true
+			NSLayoutConstraint.activate([
+				hostingController.view.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+				hostingController.view.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+				hostingController.view.topAnchor.constraint(equalTo: view.topAnchor),
+				hostingController.view.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+			])
 
-        Task { @MainActor [weak self] in
-            guard let self else { return }
+			hostingController.didMove(toParent: self)
+			self.hostingController = hostingController
+			self.viewModel = viewModel
 
-            guard let extensionContext = self.extensionContext else {
-                self.extensionContext?.cancelRequest(withError: ShareImportError.missingContext)
-                return
-            }
+			preferredContentSize = CGSize(width: 700, height: 640)
+		}
+	#endif
 
-            let digests = await SharedInventoryImportLoader.loadDigests(from: extensionContext.inputItems)
-            guard digests.isEmpty == false else {
-                presentNothingToImportAlert()
-                extensionContext.completeRequest(returningItems: nil, completionHandler: nil)
-                return
-            }
+	// MARK: - macOS Direct Import
 
-            do {
-                _ = try await SharedInventoryStoreImporter.importDigests(digests)
-                extensionContext.completeRequest(returningItems: nil, completionHandler: nil)
-            } catch {
-                extensionContext.cancelRequest(withError: error)
-            }
-        }
-    }
+	#if os(macOS)
+		private func setupMacOSMinimalUI() {
+			preferredContentSize = NSSize(width: 320, height: 120)
+		}
 
-    private func presentNothingToImportAlert() {
-        let alert = NSAlert()
-        alert.messageText = String(localized: "Nothing to import")
-        alert.informativeText = "\(String(localized: "Expected XML"))\n\n\(ShareImportSchema.exampleXML)"
-        alert.alertStyle = .informational
-        alert.addButton(withTitle: String(localized: "OK"))
-        alert.runModal()
-    }
-    #endif
+		private func importIfNeeded() {
+			guard didTriggerImport == false else { return }
+			didTriggerImport = true
+
+			Task { @MainActor [weak self] in
+				guard let self else { return }
+
+				guard let extensionContext = self.extensionContext else {
+					self.extensionContext?.cancelRequest(withError: ShareImportError.missingContext)
+					return
+				}
+
+				let digests = await SharedInventoryImportLoader.loadDigests(from: extensionContext.inputItems)
+				guard digests.isEmpty == false else {
+					presentNothingToImportAlert()
+					extensionContext.completeRequest(returningItems: nil, completionHandler: nil)
+					return
+				}
+
+				do {
+					_ = try await SharedInventoryStoreImporter.importDigests(digests)
+					extensionContext.completeRequest(returningItems: nil, completionHandler: nil)
+				} catch {
+					extensionContext.cancelRequest(withError: error)
+				}
+			}
+		}
+
+		private func presentNothingToImportAlert() {
+			let alert = NSAlert()
+			alert.messageText = String(localized: "Nothing to import")
+			alert.informativeText = "\(String(localized: "Expected XML"))\n\n\(ShareImportSchema.exampleXML)"
+			alert.alertStyle = .informational
+			alert.addButton(withTitle: String(localized: "OK"))
+			alert.runModal()
+		}
+	#endif
 }
