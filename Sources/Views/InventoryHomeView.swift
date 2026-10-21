@@ -284,32 +284,23 @@ struct InventoryHomeView: View {
 			#if os(iOS)
 				.navigationBarTitleDisplayMode(.inline)
 			#endif
-			// Floating, centred glass toolbar at the bottom; the list scrolls
-			// underneath it. macOS uses the native window toolbar (below); tvOS
-			// uses the inline top bar instead.
+			// Euryale decides: the system's own bar from OS 26, our floating
+			// capsule before it. macOS uses the window toolbar (below); tvOS the
+			// inline top bar instead.
 			#if !os(tvOS) && !os(watchOS) && !os(macOS)
-				.safeAreaInset(edge: .bottom) {
-					AdaptiveToolbar(groups: toolbarGroups)
-					.padding(.horizontal)
-					.padding(.bottom, 6)
-					.frame(maxWidth: .infinity, alignment: .center)
-				}
+				.adaptiveToolbar(groups: toolbarGroups)
 			#endif
 			#if os(macOS)
-				// Xcode-style title bar: big title + section subtitle, with the
-				// toolbar pinned trailing. A native toolbar item can't feed real
-				// width to `ViewThatFits`, so keep labels (no icon collapse) and no
-				// overflow `…` (a popover/menu from a toolbar item is unreliable).
+				// Xcode-style title bar: big title + section subtitle, with native
+				// buttons pinned trailing, so the system draws its own chrome
+				// rather than us painting a capsule inside it.
 				.navigationTitle(String(localized: "Hebe Inventory"))
 				.navigationSubtitle(selectedSection.title)
 				.toolbar {
-					ToolbarItem(placement: .primaryAction) {
-						AdaptiveToolbar(
-							groups: toolbarGroups,
-							showsBackground: false,
-							allowsOverflow: false,
-							collapsesToIcons: false
-						)
+					ToolbarItemGroup(placement: .primaryAction) {
+						ForEach(toolbarGroups.flatMap(\.self)) { action in
+							ToolbarActionButton(action)
+						}
 					}
 				}
 			#endif
